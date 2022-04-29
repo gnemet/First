@@ -8,7 +8,6 @@ class Resource extends Application.AppBase {
     // "second_color" => 0xff0000,
   };
   protected var fonts = [];
-
   protected var hours = [];
   protected var minutes = [];
   var time_lines = [];
@@ -20,10 +19,10 @@ class Resource extends Application.AppBase {
   function load() {
     dict["battery_font"] = loadResource(Rez.Fonts.Tahoma);
 
-      fonts.add( loadResource( Rez.Fonts.Tahoma ));
-      fonts.add( loadResource( Rez.Fonts.watchtowerlaser ));
-      fonts.add( loadResource( Rez.Fonts.australianshepherd ));
-      fonts.add( loadResource( Rez.Fonts.welshterrier ));
+      fonts.add( { "rsc" => loadResource( Rez.Fonts.Tahoma ), "y_offset" => 0} );
+      fonts.add( { "rsc" => loadResource( Rez.Fonts.watchtowerlaser ), "y_offset" => 10});
+      fonts.add( { "rsc" => loadResource( Rez.Fonts.australianshepherd ), "y_offset" => 0});
+      fonts.add( { "rsc" => loadResource( Rez.Fonts.welshterrier ), "y_offset" => 0});
 
 
     dict["DisplayMode"] = loadResource(Rez.Strings.DisplayMode);
@@ -40,7 +39,11 @@ class Resource extends Application.AppBase {
   }
 
   function get_font(font_id) {
-    return fonts[font_id];
+    return fonts[font_id].get( "rsc" );
+  }
+
+  function get_y_offset(font_id) {
+    return fonts[font_id].get( "y_offset" );
   }
 
   function get(name) {
