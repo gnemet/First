@@ -1,9 +1,11 @@
-import Toybox.Graphics;
-import Toybox.Lang;
-import Toybox.System;
-import Toybox.WatchUi;
+using Toybox.Graphics  as Gfx;
+using Toybox.WatchUi as Ui;
+using Toybox.Application as App;
+using Toybox.System as Sys;
 
-class FirstView extends WatchUi.WatchFace {
+import Toybox.Lang;
+
+class FirstView extends Ui.WatchFace {
   var isAwake = false;
   var is_round_screen = null;
   var resource = new Resource();
@@ -21,7 +23,7 @@ class FirstView extends WatchUi.WatchFace {
     // load resources
     resource.load();
     is_round_screen =
-      System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND;
+      Sys.getDeviceSettings().screenShape == Sys.SCREEN_SHAPE_ROUND;
   }
 
   // Called when this View is brought to the foreground. Restore
@@ -34,7 +36,7 @@ class FirstView extends WatchUi.WatchFace {
   // Update the view
   //  function onUpdate(dc as Dc) as Void {
   //    // Get and show the current time
-  //    var clockTime = System.getClockTime();
+  //    var clockTime = Sys.getClockTime();
   //    var timeString = Lang.format("$1$:$2$:$3$",
   //    [clockTime.hour.format("%02d"), clockTime.min.format("%02d"),
   //    clockTime.sec.format("%02d")]); var view =
@@ -62,15 +64,13 @@ class FirstView extends WatchUi.WatchFace {
 
   // Update the view
   function onUpdate(dc as Dc) as Void {
-    var background_color = Application.getApp().getProperty("BackgroundColor");
-    var hour_color = Application.getApp().getProperty("HourColor");
-    var min_color = Application.getApp().getProperty("MinColor");
-    var sec_color = Application.getApp().getProperty("SecColor");
-    var time_display = Application.getApp().getProperty("TimeDisplay");
-
-    var time_font = resource.get_font(
-      Application.getApp().getProperty("TimeFont")
-    );
+    var background_color = App.getApp().getProperty("BackgroundColor");
+    var hour_color = App.getApp().getProperty("HourColor");
+    var min_color = App.getApp().getProperty("MinColor");
+    var sec_color = App.getApp().getProperty("SecColor");
+    var time_display = App.getApp().getProperty("TimeDisplay");
+    var time_font_id = App.getApp().getProperty("TimeFont").toNumber() ;
+    var time_font = resource.get_font( time_font_id ) ;
 
     dc.setColor(background_color, background_color);
     dc.clear();
@@ -84,9 +84,9 @@ time_display = 2 ;
     switch (time_display) {
       case 1: {
         var lines_str = Lang.format("$1$:$2$\n$3$", [
-          System.getClockTime().hour.format("%d"),
-          System.getClockTime().min.format("%02d"),
-          System.getClockTime().sec.format("%02d"),
+          Sys.getClockTime().hour.format("%d"),
+          Sys.getClockTime().min.format("%02d"),
+          Sys.getClockTime().sec.format("%02d"),
         ]);
 
         var text_dimension = dc.getTextDimensions(lines_str, time_font);
@@ -97,14 +97,14 @@ time_display = 2 ;
         var y_pos = (dc.getHeight() - text_dimension[1]) / 2;
 
         // display text lines
-        dc.setColor(hour_color, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(hour_color, Gfx.COLOR_TRANSPARENT);
 
         dc.drawText(
           x_pos,
           y_pos,
           time_font,
           lines_str,
-          Graphics.TEXT_JUSTIFY_RIGHT
+          Gfx.TEXT_JUSTIFY_RIGHT
         );
         break;
       } // case 1
@@ -121,9 +121,9 @@ time_display = 2 ;
           y_pos += (i ? 1 : 0) * dc.getFontHeight(time_font);
 
           var text_dimension = dc.getTextDimensions(lines[i], time_font);
-          var y_offset = 10;
+          var y_offset = resource.get_y_offset( time_font_id ) ;
           var relative_text_height = text_dimension[1] - y_offset;
-          var second = System.getClockTime().sec;
+          var second = Sys.getClockTime().sec;
           var info_text = second.toString() + " " + i.toString();
 
           if (i) {
@@ -157,7 +157,7 @@ time_display = 2 ;
               second_height
             );
 
-            //        dc.setColor( Graphics.COLOR_ORANGE, Graphics.COLOR_ORANGE );
+            //        dc.setColor( Gfx.COLOR_ORANGE, Gfx.COLOR_ORANGE );
             //        dc.fillRectangle( 0 //x_pos - text_dimension[0] + 1
             //                        , y_pos + 1 + y_offset
             //                        , text_dimension[0]
@@ -167,8 +167,8 @@ time_display = 2 ;
           } // if i
 
           dc.setColor(
-            i ? Graphics.COLOR_TRANSPARENT : hour_color,
-            //Graphics.COLOR_TRANSPARENT
+            i ? Gfx.COLOR_TRANSPARENT : hour_color,
+            //Gfx.COLOR_TRANSPARENT
             background_color
           );
           dc.drawText(
@@ -176,34 +176,34 @@ time_display = 2 ;
             y_pos,
             time_font,
             lines[i],
-            Graphics.TEXT_JUSTIFY_RIGHT
+            Gfx.TEXT_JUSTIFY_RIGHT
           );
 
-          //      dc.setColor( Graphics.COLOR_ORANGE, Graphics.COLOR_BLACK);
+          //      dc.setColor( Gfx.COLOR_ORANGE, Gfx.COLOR_BLACK);
           //      dc.drawText( dc.getWidth() / 2, dc.getHeight() -
           //      dc.getFontHeight( resource.get( "battery_font" ) )
           //                 , resource.get( "battery_font" )
           //                 , info_text
-          //                 , Graphics.TEXT_JUSTIFY_CENTER
+          //                 , Gfx.TEXT_JUSTIFY_CENTER
           //                 );
         }
         break;
       } // case 2
       default: {
-        dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_BLACK);
         dc.drawText(
           0,
           0,
           time_font,
           "no display mode",
-          Graphics.TEXT_JUSTIFY_LEFT
+          Gfx.TEXT_JUSTIFY_LEFT
         );
         break;
       }
     } // switch time_display
 
     // display battery
-    var battery = System.getSystemStats().battery.toLong();
+    var battery = Sys.getSystemStats().battery.toLong();
     if (battery <= 15) {
       var battery_color_a = [
         0xfc0000, 0xfd1b01, 0xfd3501, 0xfe4b02, 0xfe5b02, 0xfe6f02, 0xff7b03,
@@ -214,14 +214,14 @@ time_display = 2 ;
 
       dc.setColor(
         battery_color_a[battery_color_index],
-        Graphics.COLOR_TRANSPARENT
+        Gfx.COLOR_TRANSPARENT
       );
       dc.drawText(
         dc.getWidth() / 2,
         dc.getHeight() - dc.getFontHeight(resource.get("battery_font")),
         resource.get("battery_font"),
         battery_color_index.toString() + "%",
-        Graphics.TEXT_JUSTIFY_CENTER
+        Gfx.TEXT_JUSTIFY_CENTER
       );
     }
 
