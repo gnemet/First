@@ -1,0 +1,86 @@
+<settings>
+
+    <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.HourColor" title="@Strings.HourColorTitle">
+        <settingConfig type="list">
+
+            <listEntry value="0x00b0fc">@Strings.ColorBlueJeans</listEntry>
+            <listEntry value="0x0c87f2">@Strings.ColorBleuDeFrance</listEntry>
+            <listEntry value="0x185be8">@Strings.ColorFlickrBlue</listEntry>
+            <listEntry value="0x2434df">@Strings.ColorPersianBlue</listEntry>
+            <listEntry value="0x2924db">@Strings.ColorBlue</listEntry>
+            <listEntry value="0x2f0dd6">@Strings.ColorMediumBlue</listEntry>
+
+            <listEntry value="0xA020F0">@Strings.ColorPurpleX11</listEntry>
+
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.MinColor" title="@Strings.MinColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x00b0fc">@Strings.ColorBlueJeans</listEntry>
+            <listEntry value="0x0c87f2">@Strings.ColorBleuDeFrance</listEntry>
+            <listEntry value="0x185be8">@Strings.ColorFlickrBlue</listEntry>
+            <listEntry value="0x2434df">@Strings.ColorPersianBlue</listEntry>
+            <listEntry value="0x2924db">@Strings.ColorBlue</listEntry>
+            <listEntry value="0x2f0dd6">@Strings.ColorMediumBlue</listEntry>
+
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.SecColor" title="@Strings.SecColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x00b0fc">@Strings.ColorBlueJeans</listEntry>
+            <listEntry value="0x0c87f2">@Strings.ColorBleuDeFrance</listEntry>
+            <listEntry value="0x185be8">@Strings.ColorFlickrBlue</listEntry>
+            <listEntry value="0x2434df">@Strings.ColorPersianBlue</listEntry>
+            <listEntry value="0x2924db">@Strings.ColorBlue</listEntry>
+            <listEntry value="0x2f0dd6">@Strings.ColorMediumBlue</listEntry>
+
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <!--setting propertyKey="@Properties.UseMilitaryFormat" title="@Strings.MilitaryFormatTitle">
+            <settingConfig type="boolean" />
+        </setting-->
+
+    <setting propertyKey="@Properties.TimeDisplay" title="@Strings.DisplayModeTitle">
+        <settingConfig type="list">
+            <listEntry value="1">@Strings.Number</listEntry>
+            <listEntry value="2">@Strings.Text</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.TimeFont" title="@Strings.TimeFontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.Font01</listEntry>
+            <listEntry value="1">@Strings.Font02</listEntry>
+            <listEntry value="2">@Strings.Font03</listEntry>
+            <listEntry value="3">@Strings.Font04</listEntry>
+        </settingConfig>
+    </setting>
+
+</settings>

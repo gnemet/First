@@ -1,0 +1,9 @@
+<properties>
+    <property id="BackgroundColor" type="number">0x000000</property>
+    <property id="HourColor" type="number">0x2924DB</property>
+    <property id="MinColor" type="number">0x185be8</property>
+    <property id="SecColor" type="number">0x00b0fc</property>
+    <property id="TimeDisplay" type="number">2</property>
+    <property id="TimeFont" type="number">1</property>
+    <!--property id="UseMilitaryFormat" type="boolean">false</property-->
+</properties>
