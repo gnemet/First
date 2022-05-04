@@ -18,6 +18,7 @@
             <listEntry value="0x2434df">@Strings.ColorPersianBlue</listEntry>
             <listEntry value="0x2924db">@Strings.ColorBlue</listEntry>
             <listEntry value="0x2f0dd6">@Strings.ColorMediumBlue</listEntry>
+            <listEntry value="0x007cc3">@Strings.ColorGarminBlue</listEntry>
 
             <listEntry value="0xA020F0">@Strings.ColorPurpleX11</listEntry>
 

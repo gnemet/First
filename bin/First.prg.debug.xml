@@ -2,302 +2,425 @@
 <debugInfo>
 <manifest filename="G:\Works\Garmin\First\manifest.xml"/>
 <pcToLineNum>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="1" lineNum="9" parent="globals/FirstApp" pc="268435456" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="1" lineNum="10" parent="globals/FirstApp" pc="268435460" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="2" lineNum="14" parent="globals/FirstApp" pc="268435479" symbol="onStart"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="3" lineNum="17" parent="globals/FirstApp" pc="268435484" symbol="onStop"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="4" lineNum="20" parent="globals/FirstApp" pc="268435489" symbol="getInitialView"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="4" lineNum="21" parent="globals/FirstApp" pc="268435493" symbol="getInitialView"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="26" parent="globals/FirstApp" pc="268435531" symbol="onSettingsChanged"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="27" parent="globals/FirstApp" pc="268435535" symbol="onSettingsChanged"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="28" parent="globals/FirstApp" pc="268435535" symbol="onSettingsChanged"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="35" parent="globals/FirstApp" pc="268435581" symbol="onSettingsChanged"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="6" parent="globals/FirstApp" pc="268439012" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="7" parent="globals/FirstApp" pc="268439030" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="6" parent="globals/FirstApp" pc="268439012" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="7" lineNum="39" parent="globals" pc="268435598" symbol="getApp"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="7" lineNum="40" parent="globals" pc="268435610" symbol="getApp"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="9" lineNum="15" parent="globals/Resource" pc="268435627" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="9" lineNum="16" parent="globals/Resource" pc="268435631" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="19" parent="globals/Resource" pc="268435650" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="20" parent="globals/Resource" pc="268435654" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="22" parent="globals/Resource" pc="268435699" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="23" parent="globals/Resource" pc="268435775" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="24" parent="globals/Resource" pc="268435851" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="25" parent="globals/Resource" pc="268435927" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="28" parent="globals/Resource" pc="268436003" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="31" parent="globals/Resource" pc="268436048" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="37" parent="globals/Resource" pc="268436081" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="10" lineNum="38" parent="globals/Resource" pc="268436120" symbol="load"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="11" lineNum="41" parent="globals/Resource" pc="268436160" symbol="get_font"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="11" lineNum="42" parent="globals/Resource" pc="268436164" symbol="get_font"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="12" lineNum="45" parent="globals/Resource" pc="268436191" symbol="get_y_offset"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="12" lineNum="46" parent="globals/Resource" pc="268436195" symbol="get_y_offset"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="13" lineNum="49" parent="globals/Resource" pc="268436222" symbol="get"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="13" lineNum="50" parent="globals/Resource" pc="268436226" symbol="get"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="53" parent="globals/Resource" pc="268436239" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="55" parent="globals/Resource" pc="268436243" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="56" parent="globals/Resource" pc="268436262" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="64" parent="globals/Resource" pc="268436349" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="65" parent="globals/Resource" pc="268436359" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="66" parent="globals/Resource" pc="268436405" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="70" parent="globals/Resource" pc="268436546" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="71" parent="globals/Resource" pc="268436551" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="14" lineNum="74" parent="globals/Resource" pc="268436605" symbol="get_time_lines"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="4" parent="globals/Resource" pc="268438923" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="5" parent="globals/Resource" pc="268438941" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="10" parent="globals/Resource" pc="268438955" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="11" parent="globals/Resource" pc="268438969" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="12" parent="globals/Resource" pc="268438983" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="13" parent="globals/Resource" pc="268438997" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="15" lineNum="4" parent="globals/Resource" pc="268438923" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="17" lineNum="13" parent="globals/FirstView" pc="268436615" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="17" lineNum="14" parent="globals/FirstView" pc="268436619" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="18" lineNum="20" parent="globals/FirstView" pc="268436638" symbol="onLayout"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="18" lineNum="24" parent="globals/FirstView" pc="268436642" symbol="onLayout"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="18" lineNum="25" parent="globals/FirstView" pc="268436660" symbol="onLayout"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="19" lineNum="32" parent="globals/FirstView" pc="268436703" symbol="onShow"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="19" lineNum="33" parent="globals/FirstView" pc="268436707" symbol="onShow"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="20" lineNum="39" parent="globals/FirstView" pc="268436718" symbol="onHide"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="21" lineNum="43" parent="globals/FirstView" pc="268436723" symbol="onExitSleep"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="21" lineNum="44" parent="globals/FirstView" pc="268436727" symbol="onExitSleep"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="22" lineNum="48" parent="globals/FirstView" pc="268436738" symbol="onEnterSleep"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="22" lineNum="49" parent="globals/FirstView" pc="268436742" symbol="onEnterSleep"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="23" lineNum="53" parent="globals/FirstView" pc="268436753" symbol="onUpdate"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="23" lineNum="54" parent="globals/FirstView" pc="268436757" symbol="onUpdate"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="23" lineNum="55" parent="globals/FirstView" pc="268436811" symbol="onUpdate"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="23" lineNum="57" parent="globals/FirstView" pc="268436823" symbol="onUpdate"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="23" lineNum="58" parent="globals/FirstView" pc="268436837" symbol="onUpdate"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="23" lineNum="59" parent="globals/FirstView" pc="268436851" symbol="onUpdate"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="64" parent="globals/FirstView" pc="268436866" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="67" parent="globals/FirstView" pc="268436870" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="68" parent="globals/FirstView" pc="268436935" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="70" parent="globals/FirstView" pc="268436938" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="71" parent="globals/FirstView" pc="268436971" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="81" parent="globals/FirstView" pc="268437170" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="84" parent="globals/FirstView" pc="268437173" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="85" parent="globals/FirstView" pc="268437178" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="89" parent="globals/FirstView" pc="268437205" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="24" lineNum="90" parent="globals/FirstView" pc="268437239" symbol="draw_doNotDisturb"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="94" parent="globals/FirstView" pc="268437291" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="95" parent="globals/FirstView" pc="268437295" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="96" parent="globals/FirstView" pc="268437326" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="97" parent="globals/FirstView" pc="268437357" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="98" parent="globals/FirstView" pc="268437388" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="99" parent="globals/FirstView" pc="268437419" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="100" parent="globals/FirstView" pc="268437459" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="102" parent="globals/FirstView" pc="268437480" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="103" parent="globals/FirstView" pc="268437501" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="104" parent="globals/FirstView" pc="268437514" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="105" parent="globals/FirstView" pc="268437532" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="108" parent="globals/FirstView" pc="268437589" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="109" parent="globals/FirstView" pc="268437605" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="111" parent="globals/FirstView" pc="268437633" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="112" parent="globals/FirstView" pc="268437648" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="114" parent="globals/FirstView" pc="268437685" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="115" parent="globals/FirstView" pc="268437705" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="116" parent="globals/FirstView" pc="268437726" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="117" parent="globals/FirstView" pc="268437739" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="118" parent="globals/FirstView" pc="268437762" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="120" parent="globals/FirstView" pc="268437793" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="122" parent="globals/FirstView" pc="268437798" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="123" parent="globals/FirstView" pc="268437814" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="131" parent="globals/FirstView" pc="268437867" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="133" parent="globals/FirstView" pc="268437883" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="134" parent="globals/FirstView" pc="268437909" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="136" parent="globals/FirstView" pc="268437922" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="137" parent="globals/FirstView" pc="268437947" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="139" parent="globals/FirstView" pc="268437976" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="140" parent="globals/FirstView" pc="268438001" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="144" parent="globals/FirstView" pc="268438036" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="157" parent="globals/FirstView" pc="268438086" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="160" parent="globals/FirstView" pc="268438116" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="25" lineNum="164" parent="globals/FirstView" pc="268438171" symbol="draw_time"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="26" lineNum="176" parent="globals/FirstView" pc="268438220" symbol="draw_battery"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="26" lineNum="178" parent="globals/FirstView" pc="268438224" symbol="draw_battery"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="26" lineNum="180" parent="globals/FirstView" pc="268438256" symbol="draw_battery"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="26" lineNum="186" parent="globals/FirstView" pc="268438267" symbol="draw_battery"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="26" lineNum="187" parent="globals/FirstView" pc="268438296" symbol="draw_battery"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="27" lineNum="197" parent="globals/FirstView" pc="268438440" symbol="get_x_offset"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="27" lineNum="198" parent="globals/FirstView" pc="268438444" symbol="get_x_offset"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="28" lineNum="8" parent="globals/FirstView" pc="268438844" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="28" lineNum="11" parent="globals/FirstView" pc="268438862" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="28" lineNum="8" parent="globals/FirstView" pc="268438844" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="30" lineNum="6" parent="globals/Background" pc="268438515" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="30" lineNum="7" parent="globals/Background" pc="268438519" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="30" lineNum="9" parent="globals/Background" pc="268438540" symbol="initialize"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="31" lineNum="12" parent="globals/Background" pc="268438561" symbol="draw"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="31" lineNum="14" parent="globals/Background" pc="268438565" symbol="draw"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="31" lineNum="16" parent="globals/Background" pc="268438618" symbol="draw"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="32" lineNum="5" parent="globals/Background" pc="268438825" symbol="&lt;init&gt;"/>
-<entry filename="G:\\Works\\Garmin\\First\\source\\Background.mc" id="32" lineNum="5" parent="globals/Background" pc="268438825" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="34" lineNum="2" parent="globals/Rez/Drawables" pc="268438917" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="35" lineNum="7" parent="globals/Rez/Fonts" pc="268438919" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="36" lineNum="14" parent="globals/Rez/JsonData" pc="268438921" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="37" lineNum="27" parent="globals/Rez/Layouts" pc="268438631" symbol="WatchFace"/>
-<entry filename="Rez" id="37" lineNum="29" parent="globals/Rez/Layouts" pc="268438643" symbol="WatchFace"/>
-<entry filename="Rez" id="37" lineNum="31" parent="globals/Rez/Layouts" pc="268438806" symbol="WatchFace"/>
-<entry filename="Rez" id="38" lineNum="20" parent="globals/Rez/Layouts" pc="268438920" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="39" lineNum="36" parent="globals/Rez/Menus" pc="268438918" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="40" lineNum="38" parent="globals/Rez/Strings" pc="268438922" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="41" lineNum="1" parent="globals/Rez" pc="268438893" symbol="&lt;init&gt;"/>
-<entry filename="Rez" id="41" lineNum="1" parent="globals/Rez" pc="268438893" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="1" lineNum="17" parent="globals/FirstApp" pc="268435456" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="1" lineNum="18" parent="globals/FirstApp" pc="268435460" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="1" lineNum="19" parent="globals/FirstApp" pc="268435478" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="1" lineNum="20" parent="globals/FirstApp" pc="268435490" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="2" lineNum="24" parent="globals/FirstApp" pc="268435509" symbol="onStart"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="3" lineNum="27" parent="globals/FirstApp" pc="268435514" symbol="onStop"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="4" lineNum="30" parent="globals/FirstApp" pc="268435519" symbol="getInitialView"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="4" lineNum="31" parent="globals/FirstApp" pc="268435523" symbol="getInitialView"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="36" parent="globals/FirstApp" pc="268435561" symbol="onSettingsChanged"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="37" parent="globals/FirstApp" pc="268435565" symbol="onSettingsChanged"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="38" parent="globals/FirstApp" pc="268435565" symbol="onSettingsChanged"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="5" lineNum="45" parent="globals/FirstApp" pc="268435599" symbol="onSettingsChanged"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="48" parent="globals/FirstApp" pc="268435616" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="49" parent="globals/FirstApp" pc="268435620" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="50" parent="globals/FirstApp" pc="268435648" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="51" parent="globals/FirstApp" pc="268435676" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="52" parent="globals/FirstApp" pc="268435704" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="53" parent="globals/FirstApp" pc="268435732" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="54" parent="globals/FirstApp" pc="268435760" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="56" parent="globals/FirstApp" pc="268435797" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="57" parent="globals/FirstApp" pc="268435802" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="58" parent="globals/FirstApp" pc="268435815" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="59" parent="globals/FirstApp" pc="268435828" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="60" parent="globals/FirstApp" pc="268435841" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="61" parent="globals/FirstApp" pc="268435854" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="6" lineNum="62" parent="globals/FirstApp" pc="268435867" symbol="read_properties"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="7" lineNum="9" parent="globals/FirstApp" pc="268440680" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="7" lineNum="10" parent="globals/FirstApp" pc="268440698" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="7" lineNum="9" parent="globals/FirstApp" pc="268440680" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="8" lineNum="67" parent="globals" pc="268435884" symbol="getApp"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="8" lineNum="68" parent="globals" pc="268435896" symbol="getApp"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="9" lineNum="71" parent="globals" pc="268435913" symbol="getRsc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="9" lineNum="72" parent="globals" pc="268435925" symbol="getRsc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstApp.mc" id="10" lineNum="7" parent="globals" pc="268440448" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="11" lineNum="16" parent="globals/StatusView" pc="268435935" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="11" lineNum="17" parent="globals/StatusView" pc="268435939" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="20" parent="globals/StatusView" pc="268435958" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="21" parent="globals/StatusView" pc="268435962" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="22" parent="globals/StatusView" pc="268435981" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="23" parent="globals/StatusView" pc="268435988" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="24" parent="globals/StatusView" pc="268436020" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="27" parent="globals/StatusView" pc="268436028" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="28" parent="globals/StatusView" pc="268436039" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="29" parent="globals/StatusView" pc="268436074" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="30" parent="globals/StatusView" pc="268436102" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="31" parent="globals/StatusView" pc="268436121" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="34" parent="globals/StatusView" pc="268436141" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="35" parent="globals/StatusView" pc="268436166" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="38" parent="globals/StatusView" pc="268436201" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="39" parent="globals/StatusView" pc="268436229" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="40" parent="globals/StatusView" pc="268436248" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="43" parent="globals/StatusView" pc="268436268" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="44" parent="globals/StatusView" pc="268436293" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="47" parent="globals/StatusView" pc="268436328" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="49" parent="globals/StatusView" pc="268436362" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="50" parent="globals/StatusView" pc="268436381" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="54" parent="globals/StatusView" pc="268436401" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="55" parent="globals/StatusView" pc="268436406" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="57" parent="globals/StatusView" pc="268436431" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="12" lineNum="60" parent="globals/StatusView" pc="268436451" symbol="draw_arc"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="13" lineNum="63" parent="globals/StatusView" pc="268436470" symbol="get_radius"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="13" lineNum="64" parent="globals/StatusView" pc="268436474" symbol="get_radius"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="13" lineNum="65" parent="globals/StatusView" pc="268436514" symbol="get_radius"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="68" parent="globals/StatusView" pc="268436518" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="69" parent="globals/StatusView" pc="268436522" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="71" parent="globals/StatusView" pc="268436539" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="72" parent="globals/StatusView" pc="268436566" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="74" parent="globals/StatusView" pc="268436637" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="78" parent="globals/StatusView" pc="268436722" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="80" parent="globals/StatusView" pc="268436729" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="81" parent="globals/StatusView" pc="268436759" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="85" parent="globals/StatusView" pc="268436782" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="14" lineNum="86" parent="globals/StatusView" pc="268436823" symbol="draw_icons"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="99" parent="globals/StatusView" pc="268436856" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="100" parent="globals/StatusView" pc="268436860" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="101" parent="globals/StatusView" pc="268436879" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="102" parent="globals/StatusView" pc="268436898" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="103" parent="globals/StatusView" pc="268436915" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="104" parent="globals/StatusView" pc="268436957" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="105" parent="globals/StatusView" pc="268436997" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="107" parent="globals/StatusView" pc="268437037" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="108" parent="globals/StatusView" pc="268437063" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="109" parent="globals/StatusView" pc="268437078" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="113" parent="globals/StatusView" pc="268437155" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="15" lineNum="123" parent="globals/StatusView" pc="268437232" symbol="draw_status"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="16" lineNum="11" parent="globals/StatusView" pc="268440558" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\StatusView.mc" id="16" lineNum="11" parent="globals/StatusView" pc="268440558" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="18" lineNum="13" parent="globals/Resource" pc="268437242" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="18" lineNum="14" parent="globals/Resource" pc="268437246" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="17" parent="globals/Resource" pc="268437265" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="18" parent="globals/Resource" pc="268437269" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="20" parent="globals/Resource" pc="268437314" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="25" parent="globals/Resource" pc="268437403" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="30" parent="globals/Resource" pc="268437492" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="35" parent="globals/Resource" pc="268437581" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="40" parent="globals/Resource" pc="268437670" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="46" parent="globals/Resource" pc="268437759" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="48" parent="globals/Resource" pc="268437804" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="54" parent="globals/Resource" pc="268437843" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="19" lineNum="55" parent="globals/Resource" pc="268437882" symbol="load"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="20" lineNum="58" parent="globals/Resource" pc="268437922" symbol="get_count_of_colors"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="20" lineNum="59" parent="globals/Resource" pc="268437926" symbol="get_count_of_colors"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="21" lineNum="62" parent="globals/Resource" pc="268437945" symbol="get_color"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="21" lineNum="63" parent="globals/Resource" pc="268437949" symbol="get_color"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="21" lineNum="67" parent="globals/Resource" pc="268437981" symbol="get_color"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="22" lineNum="70" parent="globals/Resource" pc="268438008" symbol="get_font"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="22" lineNum="71" parent="globals/Resource" pc="268438012" symbol="get_font"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="23" lineNum="74" parent="globals/Resource" pc="268438039" symbol="get_y_offset"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="23" lineNum="75" parent="globals/Resource" pc="268438043" symbol="get_y_offset"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="24" lineNum="78" parent="globals/Resource" pc="268438070" symbol="get_line_spacing"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="24" lineNum="79" parent="globals/Resource" pc="268438074" symbol="get_line_spacing"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="25" lineNum="82" parent="globals/Resource" pc="268438101" symbol="get"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="25" lineNum="83" parent="globals/Resource" pc="268438105" symbol="get"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="86" parent="globals/Resource" pc="268438118" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="88" parent="globals/Resource" pc="268438122" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="89" parent="globals/Resource" pc="268438141" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="97" parent="globals/Resource" pc="268438228" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="98" parent="globals/Resource" pc="268438238" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="99" parent="globals/Resource" pc="268438284" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="105" parent="globals/Resource" pc="268438425" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="106" parent="globals/Resource" pc="268438430" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="26" lineNum="109" parent="globals/Resource" pc="268438484" symbol="get_time_lines"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="4" parent="globals/Resource" pc="268440577" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="5" parent="globals/Resource" pc="268440595" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="6" parent="globals/Resource" pc="268440609" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="7" parent="globals/Resource" pc="268440623" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="8" parent="globals/Resource" pc="268440637" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="9" parent="globals/Resource" pc="268440651" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="11" parent="globals/Resource" pc="268440665" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\Resource.mc" id="27" lineNum="4" parent="globals/Resource" pc="268440577" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="29" lineNum="16" parent="globals/FirstView" pc="268438494" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="29" lineNum="17" parent="globals/FirstView" pc="268438498" symbol="initialize"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="30" lineNum="23" parent="globals/FirstView" pc="268438517" symbol="onLayout"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="30" lineNum="30" parent="globals/FirstView" pc="268438521" symbol="onLayout"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="31" lineNum="37" parent="globals/FirstView" pc="268438564" symbol="onShow"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="31" lineNum="38" parent="globals/FirstView" pc="268438568" symbol="onShow"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="32" lineNum="44" parent="globals/FirstView" pc="268438579" symbol="onHide"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="33" lineNum="48" parent="globals/FirstView" pc="268438584" symbol="onExitSleep"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="33" lineNum="49" parent="globals/FirstView" pc="268438588" symbol="onExitSleep"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="34" lineNum="53" parent="globals/FirstView" pc="268438599" symbol="onEnterSleep"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="34" lineNum="54" parent="globals/FirstView" pc="268438603" symbol="onEnterSleep"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="35" lineNum="58" parent="globals/FirstView" pc="268438614" symbol="onUpdate"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="35" lineNum="59" parent="globals/FirstView" pc="268438618" symbol="onUpdate"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="35" lineNum="60" parent="globals/FirstView" pc="268438664" symbol="onUpdate"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="35" lineNum="62" parent="globals/FirstView" pc="268438676" symbol="onUpdate"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="35" lineNum="64" parent="globals/FirstView" pc="268438690" symbol="onUpdate"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="35" lineNum="65" parent="globals/FirstView" pc="268438704" symbol="onUpdate"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="36" lineNum="71" parent="globals/FirstView" pc="268438725" symbol="draw_doNotDisturb"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="36" lineNum="74" parent="globals/FirstView" pc="268438729" symbol="draw_doNotDisturb"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="36" lineNum="78" parent="globals/FirstView" pc="268438794" symbol="draw_doNotDisturb"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="36" lineNum="81" parent="globals/FirstView" pc="268438797" symbol="draw_doNotDisturb"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="36" lineNum="102" parent="globals/FirstView" pc="268439030" symbol="draw_doNotDisturb"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="36" lineNum="103" parent="globals/FirstView" pc="268439064" symbol="draw_doNotDisturb"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="107" parent="globals/FirstView" pc="268439116" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="108" parent="globals/FirstView" pc="268439120" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="109" parent="globals/FirstView" pc="268439133" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="110" parent="globals/FirstView" pc="268439163" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="113" parent="globals/FirstView" pc="268439207" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="114" parent="globals/FirstView" pc="268439237" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="115" parent="globals/FirstView" pc="268439250" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="116" parent="globals/FirstView" pc="268439257" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="119" parent="globals/FirstView" pc="268439314" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="120" parent="globals/FirstView" pc="268439330" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="122" parent="globals/FirstView" pc="268439358" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="123" parent="globals/FirstView" pc="268439373" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="125" parent="globals/FirstView" pc="268439393" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="126" parent="globals/FirstView" pc="268439413" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="127" parent="globals/FirstView" pc="268439443" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="128" parent="globals/FirstView" pc="268439456" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="129" parent="globals/FirstView" pc="268439479" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="131" parent="globals/FirstView" pc="268439510" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="133" parent="globals/FirstView" pc="268439515" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="134" parent="globals/FirstView" pc="268439543" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="142" parent="globals/FirstView" pc="268439596" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="144" parent="globals/FirstView" pc="268439624" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="145" parent="globals/FirstView" pc="268439650" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="147" parent="globals/FirstView" pc="268439663" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="148" parent="globals/FirstView" pc="268439688" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="150" parent="globals/FirstView" pc="268439717" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="151" parent="globals/FirstView" pc="268439742" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="155" parent="globals/FirstView" pc="268439777" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="168" parent="globals/FirstView" pc="268439827" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="171" parent="globals/FirstView" pc="268439857" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="37" lineNum="175" parent="globals/FirstView" pc="268439905" symbol="draw_time"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="38" lineNum="179" parent="globals/FirstView" pc="268439954" symbol="draw_battery"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="38" lineNum="181" parent="globals/FirstView" pc="268439958" symbol="draw_battery"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="38" lineNum="183" parent="globals/FirstView" pc="268439990" symbol="draw_battery"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="38" lineNum="189" parent="globals/FirstView" pc="268440001" symbol="draw_battery"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="38" lineNum="190" parent="globals/FirstView" pc="268440030" symbol="draw_battery"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="39" lineNum="200" parent="globals/FirstView" pc="268440186" symbol="get_x_offset"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="39" lineNum="201" parent="globals/FirstView" pc="268440190" symbol="get_x_offset"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="40" lineNum="9" parent="globals/FirstView" pc="268440479" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="40" lineNum="14" parent="globals/FirstView" pc="268440497" symbol="&lt;init&gt;"/>
+<entry filename="G:\\Works\\Garmin\\First\\source\\FirstView.mc" id="40" lineNum="9" parent="globals/FirstView" pc="268440479" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="42" lineNum="2" parent="globals/Rez/Drawables" pc="268440552" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="43" lineNum="7" parent="globals/Rez/Fonts" pc="268440554" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="44" lineNum="15" parent="globals/Rez/JsonData" pc="268440556" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="45" lineNum="30" parent="globals/Rez/Layouts" pc="268440255" symbol="WatchFace"/>
+<entry filename="Rez" id="45" lineNum="32" parent="globals/Rez/Layouts" pc="268440267" symbol="WatchFace"/>
+<entry filename="Rez" id="45" lineNum="34" parent="globals/Rez/Layouts" pc="268440430" symbol="WatchFace"/>
+<entry filename="Rez" id="46" lineNum="23" parent="globals/Rez/Layouts" pc="268440555" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="47" lineNum="39" parent="globals/Rez/Menus" pc="268440553" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="48" lineNum="41" parent="globals/Rez/Strings" pc="268440557" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="49" lineNum="1" parent="globals/Rez" pc="268440528" symbol="&lt;init&gt;"/>
+<entry filename="Rez" id="49" lineNum="1" parent="globals/Rez" pc="268440528" symbol="&lt;init&gt;"/>
 </pcToLineNum>
 <symbolTable>
 <entry id="8388639" module="true" symbol="Graphics"/>
 <entry id="8390101" object="true" symbol="BufferedBitmap"/>
-<entry id="59" method="true" symbol="get_time_lines"/>
+<entry field="true" id="82" symbol="hour_color"/>
+<entry id="80" method="true" symbol="get_time_lines"/>
 <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
-<entry id="14" method="true" symbol="draw_doNotDisturb"/>
+<entry id="18" method="true" symbol="draw_doNotDisturb"/>
 <entry id="4" module="true" symbol="globals/Rez/Menus"/>
-<entry field="true" id="34" symbol="SecColorTitle"/>
-<entry field="true" id="36" symbol="MinColorTitle"/>
-<entry field="true" id="53" symbol="dict"/>
+<entry field="true" id="41" symbol="SecColorTitle"/>
+<entry field="true" id="17" symbol="status"/>
+<entry field="true" id="43" symbol="MinColorTitle"/>
+<entry field="true" id="68" symbol="dict"/>
+<entry id="12" object="true" symbol="StatusView"/>
+<entry field="true" id="85" symbol="time_display"/>
 <entry id="8389683" method="true" symbol="onSettingsChanged"/>
-<entry field="true" id="30" symbol="ColorYellow"/>
-<entry field="true" id="33" symbol="ColorRed"/>
-<entry field="true" id="35" symbol="ColorPersianBlue"/>
-<entry field="true" id="20" symbol="DoNotDisturbIcon"/>
+<entry field="true" id="37" symbol="ColorYellow"/>
+<entry field="true" id="40" symbol="ColorRed"/>
+<entry field="true" id="42" symbol="ColorPersianBlue"/>
+<entry field="true" id="24" symbol="DoNotDisturbIcon"/>
+<entry id="64" method="true" symbol="draw_arc"/>
 <entry field="true" id="8388758" object="true" symbol="Number"/>
-<entry field="true" id="48" symbol="Font04"/>
-<entry field="true" id="49" symbol="Font03"/>
-<entry field="true" id="50" symbol="Font02"/>
-<entry field="true" id="51" symbol="Font01"/>
-<entry field="true" id="24" symbol="australianshepherd"/>
+<entry field="true" id="56" symbol="Font04"/>
+<entry field="true" id="57" symbol="Font03"/>
+<entry field="true" id="58" symbol="Font02"/>
+<entry field="true" id="59" symbol="Font01"/>
+<entry field="true" id="28" symbol="australianshepherd"/>
 <entry field="true" id="8389795" symbol="doNotDisturb"/>
-<entry field="true" id="45" symbol="ColorBlueJeans"/>
-<entry field="true" id="52" symbol="ColorFlickrBlue"/>
+<entry field="true" id="53" symbol="ColorBlueJeans"/>
+<entry id="87" method="true" symbol="read_properties"/>
+<entry id="65" method="true" symbol="get_radius"/>
+<entry field="true" id="32" symbol="minute01"/>
+<entry field="true" id="71" symbol="text_minutes"/>
+<entry field="true" id="60" symbol="ColorFlickrBlue"/>
+<entry id="8389782" module="true" symbol="StringUtil"/>
 <entry field="true" id="8388611" module="true" symbol="Toybox"/>
 <entry id="8390139" symbol="bitmapResource"/>
 <entry field="true" id="8389060" object="true" symbol="Text"/>
-<entry field="true" id="46" symbol="ColorMediumBlue"/>
-<entry field="true" id="27" symbol="ColorBlue"/>
-<entry field="true" id="31" symbol="AppName"/>
+<entry field="true" id="54" symbol="ColorMediumBlue"/>
+<entry field="true" id="34" symbol="ColorBlue"/>
+<entry field="true" id="38" symbol="AppName"/>
 <entry id="8" module="true" symbol="globals/Rez/Strings"/>
 <entry id="8388772" module="true" object="true" symbol="Fonts"/>
-<entry field="true" id="12" symbol="isAwake"/>
+<entry field="true" id="15" symbol="isAwake"/>
 <entry field="true" id="8389338" symbol="minute"/>
-<entry id="17" method="true" symbol="get_x_offset"/>
+<entry id="21" method="true" symbol="get_x_offset"/>
 <entry id="8388648" module="true" symbol="WatchUi"/>
-<entry id="11" object="true" symbol="FirstView"/>
-<entry id="16" method="true" symbol="draw_battery"/>
+<entry id="14" object="true" symbol="FirstView"/>
+<entry id="20" method="true" symbol="draw_battery"/>
+<entry field="true" id="8388913" symbol="stepGoal"/>
+<entry id="8390425" module="true" symbol="Properties"/>
 <entry id="2" module="true" symbol="globals/Rez"/>
-<entry field="true" id="22" symbol="Tahoma"/>
+<entry field="true" id="8389874" symbol="floorsClimbedGoal"/>
+<entry field="true" id="26" symbol="Tahoma"/>
+<entry id="67" method="true" symbol="draw_status"/>
 <entry id="8388789" method="true" symbol="get"/>
 <entry id="8389124" method="true" symbol="onUpdate"/>
 <entry id="8389375" method="true" object="true" symbol="WatchFace"/>
 <entry field="true" id="8389065" symbol="locY"/>
 <entry field="true" id="8389064" symbol="locX"/>
-<entry id="56" method="true" symbol="load"/>
+<entry id="74" method="true" symbol="load"/>
 <entry id="8388771" module="true" object="true" symbol="Drawables"/>
 <entry id="8389348" symbol="font"/>
 <entry field="true" id="8389067" symbol="height"/>
-<entry id="19" module="true" symbol="Menus"/>
+<entry id="23" module="true" symbol="Menus"/>
 <entry id="8389275" method="true" symbol="getApp"/>
-<entry id="10" object="true" symbol="Resource"/>
-<entry field="true" id="42" symbol="ColorDarkGray"/>
+<entry id="13" object="true" symbol="Resource"/>
+<entry field="true" id="49" symbol="ColorDarkGray"/>
+<entry field="true" id="63" symbol="&lt;globals/StatusView/&lt;&gt;degreeEnd&gt;"/>
 <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="30" symbol="connect"/>
+<entry field="true" id="8389869" symbol="activeMinutesWeek"/>
 <entry field="true" id="8389066" symbol="width"/>
+<entry field="true" id="72" symbol="colors"/>
 <entry id="8389122" method="true" symbol="onLayout"/>
 <entry id="8389376" method="true" symbol="onEnterSleep"/>
 <entry field="true" id="8389063" symbol="identifier"/>
-<entry field="true" id="43" symbol="ColorBleuDeFrance"/>
+<entry field="true" id="50" symbol="ColorBleuDeFrance"/>
 <entry id="8389349" symbol="justification"/>
-<entry id="57" method="true" symbol="get_font"/>
-<entry field="true" id="54" symbol="fonts"/>
-<entry field="true" id="37" symbol="ColorWhite"/>
+<entry id="77" method="true" symbol="get_font"/>
+<entry field="true" id="69" symbol="fonts"/>
+<entry field="true" id="44" symbol="ColorWhite"/>
+<entry field="true" id="33" symbol="GreenYellowRed"/>
 <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
-<entry field="true" id="44" symbol="ColorBlack"/>
-<entry field="true" id="40" symbol="CurrentTimestring"/>
+<entry field="true" id="52" symbol="ColorBlack"/>
+<entry field="true" id="47" symbol="CurrentTimestring"/>
 <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-<entry field="true" id="26" symbol="FR945"/>
-<entry field="true" id="13" symbol="is_round_screen"/>
+<entry field="true" id="31" symbol="FR945"/>
+<entry field="true" id="61" symbol="&lt;globals/StatusView/&lt;&gt;pen_width&gt;"/>
+<entry field="true" id="16" symbol="is_round_screen"/>
+<entry field="true" id="8389871" symbol="activeMinutesWeekGoal"/>
+<entry field="true" id="62" symbol="&lt;globals/StatusView/&lt;&gt;degreeStart&gt;"/>
 <entry id="8389377" method="true" symbol="onExitSleep"/>
-<entry field="true" id="25" symbol="welshterrier"/>
-<entry field="true" id="8391768" symbol="resource"/>
+<entry field="true" id="29" symbol="welshterrier"/>
 <entry id="8388769" module="true" object="true" symbol="Rez"/>
-<entry field="true" id="29" symbol="ColorPurpleX11"/>
-<entry field="true" id="41" symbol="TimeFontTitle"/>
+<entry field="true" id="36" symbol="ColorPurpleX11"/>
+<entry field="true" id="51" symbol="ColorGarminBlue"/>
+<entry field="true" id="48" symbol="TimeFontTitle"/>
 <entry field="true" id="8388720" symbol="hour"/>
+<entry field="true" id="83" symbol="min_color"/>
 <entry id="8388640" module="true" symbol="Lang"/>
 <entry id="8390088" module="true" object="true" symbol="JsonData"/>
-<entry id="8389068" method="true" symbol="draw"/>
-<entry field="true" id="21" symbol="LauncherIcon"/>
+<entry field="true" id="25" symbol="LauncherIcon"/>
 <entry id="8388610" symbol="statics"/>
+<entry field="true" id="86" symbol="time_font_id"/>
 <entry id="8389123" method="true" symbol="onShow"/>
-<entry id="9" object="true" symbol="FirstApp"/>
-<entry field="true" id="47" symbol="DisplayMode"/>
-<entry field="true" id="8389342" symbol="hours"/>
-<entry id="15" method="true" symbol="draw_time"/>
+<entry id="10" object="true" symbol="FirstApp"/>
+<entry field="true" id="55" symbol="DisplayMode"/>
+<entry id="19" method="true" symbol="draw_time"/>
 <entry id="8389350" module="true" symbol="globals"/>
-<entry field="true" id="28" symbol="BackgroundColorTitle"/>
+<entry id="11" method="true" symbol="getRsc"/>
+<entry field="true" id="35" symbol="BackgroundColorTitle"/>
 <entry id="8388770" module="true" object="true" symbol="Strings"/>
-<entry id="8390146" module="true" object="true" symbol="Background"/>
+<entry field="true" id="8389872" symbol="floorsClimbed"/>
 <entry id="8388702" method="true" symbol="initialize"/>
 <entry id="8389279" method="true" symbol="onStart"/>
-<entry field="true" id="55" symbol="time_lines"/>
-<entry field="true" id="32" symbol="HourColorTitle"/>
-<entry field="true" id="39" symbol="ColorLightGray"/>
-<entry field="true" id="60" symbol="background_color"/>
-<entry id="58" method="true" symbol="get_y_offset"/>
+<entry field="true" id="73" symbol="time_lines"/>
+<entry field="true" id="39" symbol="HourColorTitle"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry field="true" id="46" symbol="ColorLightGray"/>
+<entry field="true" id="81" symbol="background_color"/>
+<entry id="78" method="true" symbol="get_y_offset"/>
 <entry id="8389280" method="true" symbol="getInitialView"/>
 <entry id="8389281" method="true" symbol="onStop"/>
+<entry id="66" method="true" symbol="draw_icons"/>
 <entry id="8389347" symbol="color"/>
-<entry id="18" module="true" symbol="Layouts"/>
-<entry field="true" id="23" symbol="watchtowerlaser"/>
-<entry field="true" id="38" symbol="DisplayModeTitle"/>
-<entry field="true" id="8389343" symbol="minutes"/>
+<entry id="22" module="true" symbol="Layouts"/>
+<entry field="true" id="27" symbol="watchtowerlaser"/>
+<entry field="true" id="45" symbol="DisplayModeTitle"/>
+<entry field="true" id="84" symbol="sec_color"/>
+<entry id="75" method="true" symbol="get_count_of_colors"/>
 <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
 <entry id="8389125" method="true" symbol="onHide"/>
+<entry id="76" method="true" symbol="get_color"/>
+<entry field="true" id="70" symbol="text_hours"/>
+<entry id="79" method="true" symbol="get_line_spacing"/>
 <entry id="8388635" module="true" symbol="Application"/>
+<entry field="true" id="9" symbol="AppResource"/>
 <entry id="8389660" symbol="palette"/>
 </symbolTable>
 <localVars>
-<entry arg="true" endPc="268435483" name="state" stackId="1" startPc="268435479"/>
-<entry arg="true" endPc="268435488" name="state" stackId="1" startPc="268435484"/>
-<entry endPc="268436158" name="colors" stackId="1" startPc="268435654"/>
-<entry arg="true" endPc="268436190" name="font_id" stackId="1" startPc="268436160"/>
-<entry arg="true" endPc="268436221" name="font_id" stackId="1" startPc="268436191"/>
-<entry arg="true" endPc="268436238" name="name" stackId="1" startPc="268436222"/>
-<entry endPc="268436613" name="hour" stackId="3" startPc="268436243"/>
-<entry endPc="268436613" name="clockTime" stackId="2" startPc="268436243"/>
-<entry endPc="268436613" name="separator" stackId="5" startPc="268436243"/>
-<entry endPc="268436613" name="minute" stackId="4" startPc="268436243"/>
-<entry arg="true" endPc="268436614" name="time_display" stackId="1" startPc="268436239"/>
-<entry arg="true" endPc="268436702" name="dc" stackId="1" startPc="268436638"/>
-<entry arg="true" endPc="268436865" name="dc" stackId="1" startPc="268436753"/>
-<entry endPc="268437289" name="dndIcon" stackId="2" startPc="268436870"/>
-<entry endPc="268437289" name="dndBuffer" stackId="3" startPc="268436870"/>
-<entry arg="true" endPc="268437290" name="dc" stackId="1" startPc="268436866"/>
-<entry endPc="268438112" name="min_line" stackId="20" startPc="268437798"/>
-<entry endPc="268438112" name="second_height" stackId="21" startPc="268437798"/>
-<entry endPc="268438205" name="y_offset" stackId="16" startPc="268437648"/>
-<entry endPc="268438205" name="second" stackId="18" startPc="268437648"/>
-<entry endPc="268438205" name="text_dimension" stackId="15" startPc="268437648"/>
-<entry endPc="268438205" name="info_text" stackId="19" startPc="268437648"/>
-<entry endPc="268438205" name="relative_text_height" stackId="17" startPc="268437648"/>
-<entry endPc="268438218" name="i" stackId="14" startPc="268437648"/>
-<entry endPc="268438218" name="hour_color" stackId="2" startPc="268437295"/>
-<entry endPc="268438218" name="all_text_height" stackId="10" startPc="268437295"/>
-<entry endPc="268438218" name="num_of_lines" stackId="9" startPc="268437295"/>
-<entry endPc="268438218" name="y_pos" stackId="13" startPc="268437295"/>
-<entry endPc="268438218" name="x_offset" stackId="11" startPc="268437295"/>
-<entry endPc="268438218" name="time_display" stackId="5" startPc="268437295"/>
-<entry endPc="268438218" name="x_pos" stackId="12" startPc="268437295"/>
-<entry endPc="268438218" name="min_color" stackId="3" startPc="268437295"/>
-<entry endPc="268438218" name="time_font" stackId="7" startPc="268437295"/>
-<entry endPc="268438218" name="sec_color" stackId="4" startPc="268437295"/>
-<entry endPc="268438218" name="time_font_id" stackId="6" startPc="268437295"/>
-<entry endPc="268438218" name="lines" stackId="8" startPc="268437295"/>
-<entry arg="true" endPc="268438219" name="dc" stackId="1" startPc="268437291"/>
-<entry endPc="268438438" name="battery" stackId="2" startPc="268438224"/>
-<entry arg="true" endPc="268438439" name="dc" stackId="1" startPc="268438220"/>
-<entry arg="true" endPc="268438514" name="h" stackId="2" startPc="268438440"/>
-<entry arg="true" endPc="268438514" name="r" stackId="1" startPc="268438440"/>
-<entry endPc="268438559" name="dictionary" stackId="1" startPc="268438519"/>
-<entry arg="true" endPc="268438630" name="dc" stackId="1" startPc="268438561"/>
-<entry endPc="268438822" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268438643"/>
-<entry arg="true" endPc="268438823" name="dc" stackId="1" startPc="268438631"/>
+<entry arg="true" endPc="268435513" name="state" stackId="1" startPc="268435509"/>
+<entry arg="true" endPc="268435518" name="state" stackId="1" startPc="268435514"/>
+<entry endPc="268436137" name="percent" stackId="6" startPc="268436039"/>
+<entry endPc="268436264" name="percent" stackId="7" startPc="268436166"/>
+<entry endPc="268436397" name="percent" stackId="8" startPc="268436293"/>
+<entry endPc="268436468" name="battery" stackId="4" startPc="268435962"/>
+<entry endPc="268436468" name="connect_icons" stackId="5" startPc="268435962"/>
+<entry endPc="268436468" name="step" stackId="3" startPc="268435962"/>
+<entry endPc="268436468" name="info" stackId="2" startPc="268435962"/>
+<entry arg="true" endPc="268436469" name="dc" stackId="1" startPc="268435958"/>
+<entry endPc="268436516" name="r" stackId="3" startPc="268436474"/>
+<entry arg="true" endPc="268436517" name="dc" stackId="1" startPc="268436470"/>
+<entry arg="true" endPc="268436517" name="step" stackId="2" startPc="268436470"/>
+<entry endPc="268436781" name="i" stackId="9" startPc="268436759"/>
+<entry endPc="268436854" name="y_pos" stackId="7" startPc="268436522"/>
+<entry endPc="268436854" name="font_id" stackId="5" startPc="268436522"/>
+<entry endPc="268436854" name="x_pos" stackId="6" startPc="268436522"/>
+<entry endPc="268436854" name="r" stackId="4" startPc="268436522"/>
+<entry endPc="268436854" name="str" stackId="8" startPc="268436522"/>
+<entry arg="true" endPc="268436855" name="dc" stackId="1" startPc="268436518"/>
+<entry arg="true" endPc="268436855" name="icons" stackId="3" startPc="268436518"/>
+<entry arg="true" endPc="268436855" name="step" stackId="2" startPc="268436518"/>
+<entry endPc="268437231" name="i" stackId="10" startPc="268437078"/>
+<entry endPc="268437240" name="y_pos" stackId="5" startPc="268436860"/>
+<entry endPc="268437240" name="prcnt" stackId="7" startPc="268436860"/>
+<entry endPc="268437240" name="x_pos" stackId="4" startPc="268436860"/>
+<entry endPc="268437240" name="r" stackId="6" startPc="268436860"/>
+<entry endPc="268437240" name="color_index" stackId="8" startPc="268436860"/>
+<entry endPc="268437240" name="angle" stackId="9" startPc="268436860"/>
+<entry arg="true" endPc="268437241" name="dc" stackId="1" startPc="268436856"/>
+<entry arg="true" endPc="268437241" name="percent" stackId="3" startPc="268436856"/>
+<entry arg="true" endPc="268437241" name="step" stackId="2" startPc="268436856"/>
+<entry endPc="268438006" name="i" stackId="3" startPc="268437949"/>
+<entry arg="true" endPc="268438007" name="is_reverse" stackId="2" startPc="268437945"/>
+<entry arg="true" endPc="268438007" name="index_of_color" stackId="1" startPc="268437945"/>
+<entry arg="true" endPc="268438038" name="font_id" stackId="1" startPc="268438008"/>
+<entry arg="true" endPc="268438069" name="font_id" stackId="1" startPc="268438039"/>
+<entry arg="true" endPc="268438100" name="font_id" stackId="1" startPc="268438070"/>
+<entry arg="true" endPc="268438117" name="name" stackId="1" startPc="268438101"/>
+<entry endPc="268438492" name="hour" stackId="3" startPc="268438122"/>
+<entry endPc="268438492" name="clockTime" stackId="2" startPc="268438122"/>
+<entry endPc="268438492" name="separator" stackId="5" startPc="268438122"/>
+<entry endPc="268438492" name="minute" stackId="4" startPc="268438122"/>
+<entry arg="true" endPc="268438493" name="time_display" stackId="1" startPc="268438118"/>
+<entry arg="true" endPc="268438563" name="dc" stackId="1" startPc="268438517"/>
+<entry arg="true" endPc="268438724" name="dc" stackId="1" startPc="268438614"/>
+<entry endPc="268439114" name="dndIcon" stackId="2" startPc="268438729"/>
+<entry endPc="268439114" name="dndBuffer" stackId="3" startPc="268438729"/>
+<entry arg="true" endPc="268439115" name="dc" stackId="1" startPc="268438725"/>
+<entry endPc="268439853" name="min_line" stackId="17" startPc="268439515"/>
+<entry endPc="268439853" name="second_height" stackId="18" startPc="268439515"/>
+<entry endPc="268439939" name="y_offset" stackId="13" startPc="268439373"/>
+<entry endPc="268439939" name="second" stackId="15" startPc="268439373"/>
+<entry endPc="268439939" name="text_dimension" stackId="12" startPc="268439373"/>
+<entry endPc="268439939" name="info_text" stackId="16" startPc="268439373"/>
+<entry endPc="268439939" name="relative_text_height" stackId="14" startPc="268439373"/>
+<entry endPc="268439952" name="i" stackId="11" startPc="268439373"/>
+<entry endPc="268439952" name="all_text_height" stackId="7" startPc="268439120"/>
+<entry endPc="268439952" name="num_of_lines" stackId="6" startPc="268439120"/>
+<entry endPc="268439952" name="app" stackId="2" startPc="268439120"/>
+<entry endPc="268439952" name="time_font_heigth" stackId="4" startPc="268439120"/>
+<entry endPc="268439952" name="y_pos" stackId="10" startPc="268439120"/>
+<entry endPc="268439952" name="x_offset" stackId="8" startPc="268439120"/>
+<entry endPc="268439952" name="x_pos" stackId="9" startPc="268439120"/>
+<entry endPc="268439952" name="time_font" stackId="3" startPc="268439120"/>
+<entry endPc="268439952" name="lines" stackId="5" startPc="268439120"/>
+<entry arg="true" endPc="268439953" name="dc" stackId="1" startPc="268439116"/>
+<entry endPc="268440184" name="battery" stackId="2" startPc="268439958"/>
+<entry arg="true" endPc="268440185" name="dc" stackId="1" startPc="268439954"/>
+<entry arg="true" endPc="268440254" name="h" stackId="2" startPc="268440186"/>
+<entry arg="true" endPc="268440254" name="r" stackId="1" startPc="268440186"/>
+<entry endPc="268440446" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268440267"/>
+<entry arg="true" endPc="268440447" name="dc" stackId="1" startPc="268440255"/>
 </localVars>
 <annotations>
 <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="DoNotDisturbIcon"/>
@@ -306,9 +429,12 @@
 <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="watchtowerlaser"/>
 <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="australianshepherd"/>
 <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="welshterrier"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="connect"/>
 <annotationEntry annotation="initialized" class="JsonData" module="globals/Rez" symbol="FR945"/>
 <annotationEntry annotation="initialized" class="JsonData" module="globals/Rez" symbol="hour"/>
+<annotationEntry annotation="initialized" class="JsonData" module="globals/Rez" symbol="minute01"/>
 <annotationEntry annotation="initialized" class="JsonData" module="globals/Rez" symbol="minute"/>
+<annotationEntry annotation="initialized" class="JsonData" module="globals/Rez" symbol="GreenYellowRed"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorPurpleX11"/>
@@ -327,6 +453,7 @@
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="TimeFontTitle"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBleuDeFrance"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorGarminBlue"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Text"/>
 <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlueJeans"/>
@@ -340,143 +467,178 @@
 </annotations>
 <dataEntryOffsetMappings>
 <dataEntry label="globals" offset="87" parentId="" symbolId="globals" type="module"/>
-<dataEntry label="globals/Background" offset="174" parentId="globals" symbolId="Background" type="class"/>
-<dataEntry label="globals/FirstView" offset="229" parentId="globals" symbolId="FirstView" type="class"/>
-<dataEntry label="globals/Rez" offset="380" parentId="globals" symbolId="Rez" type="module"/>
-<dataEntry label="globals/Rez/Drawables" offset="459" parentId="Rez" symbolId="Drawables" type="module"/>
-<dataEntry label="globals/Rez/Menus" offset="506" parentId="Rez" symbolId="Menus" type="module"/>
-<dataEntry label="globals/Rez/Fonts" offset="537" parentId="Rez" symbolId="Fonts" type="module"/>
-<dataEntry label="globals/Rez/Layouts" offset="600" parentId="Rez" symbolId="Layouts" type="module"/>
-<dataEntry label="globals/Rez/JsonData" offset="639" parentId="Rez" symbolId="JsonData" type="module"/>
-<dataEntry label="globals/Rez/Strings" offset="694" parentId="Rez" symbolId="Strings" type="module"/>
-<dataEntry label="globals/Resource" offset="949" parentId="globals" symbolId="Resource" type="class"/>
-<dataEntry label="globals/FirstApp" offset="1076" parentId="globals" symbolId="FirstApp" type="class"/>
+<dataEntry label="globals/FirstView" offset="190" parentId="globals" symbolId="FirstView" type="class"/>
+<dataEntry label="globals/Rez" offset="341" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="420" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Menus" offset="467" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="498" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="569" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/JsonData" offset="608" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="679" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/StatusView" offset="942" parentId="globals" symbolId="StatusView" type="class"/>
+<dataEntry label="globals/Resource" offset="1045" parentId="globals" symbolId="Resource" type="class"/>
+<dataEntry label="globals/FirstApp" offset="1204" parentId="globals" symbolId="FirstApp" type="class"/>
 </dataEntryOffsetMappings>
 <functions>
-<functionEntry accessMode="public" endPc="268435478" name="initialize" parent="FirstApp" startPc="268435456">
+<functionEntry accessMode="public" endPc="268435508" name="initialize" parent="FirstApp" startPc="268435456">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435483" name="onStart" parent="FirstApp" startPc="268435479">
+<functionEntry accessMode="public" endPc="268435513" name="onStart" parent="FirstApp" startPc="268435509">
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435488" name="onStop" parent="FirstApp" startPc="268435484">
+<functionEntry accessMode="public" endPc="268435518" name="onStop" parent="FirstApp" startPc="268435514">
 <param id="state"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435530" name="getInitialView" parent="FirstApp" startPc="268435489">
+<functionEntry accessMode="public" endPc="268435560" name="getInitialView" parent="FirstApp" startPc="268435519">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435597" name="onSettingsChanged" parent="FirstApp" startPc="268435531">
+<functionEntry accessMode="public" endPc="268435615" name="onSettingsChanged" parent="FirstApp" startPc="268435561">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268439050" name="&lt;init&gt;" parent="FirstApp" startPc="268439012">
+<functionEntry accessMode="public" endPc="268435883" name="read_properties" parent="FirstApp" startPc="268435616">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435626" name="getApp" startPc="268435598">
+<functionEntry accessMode="protected" endPc="268440718" name="&lt;init&gt;" parent="FirstApp" startPc="268440680">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268435649" name="initialize" parent="Resource" startPc="268435627">
+<functionEntry accessMode="public" endPc="268435912" name="getApp" startPc="268435884">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436159" name="load" parent="Resource" startPc="268435650">
+<functionEntry accessMode="public" endPc="268435934" name="getRsc" startPc="268435913">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436190" name="get_font" parent="Resource" startPc="268436160">
+<functionEntry accessMode="public" endPc="268435957" name="initialize" parent="StatusView" startPc="268435935">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436469" name="draw_arc" parent="StatusView" startPc="268435958">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436517" name="get_radius" parent="StatusView" startPc="268436470">
+<param id="dc"/>
+<param id="step"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436855" name="draw_icons" parent="StatusView" startPc="268436518">
+<param id="dc"/>
+<param id="step"/>
+<param id="icons"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437241" name="draw_status" parent="StatusView" startPc="268436856">
+<param id="dc"/>
+<param id="step"/>
+<param id="percent"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440576" name="&lt;init&gt;" parent="StatusView" startPc="268440558">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437264" name="initialize" parent="Resource" startPc="268437242">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437921" name="load" parent="Resource" startPc="268437265">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437944" name="get_count_of_colors" parent="Resource" startPc="268437922">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438007" name="get_color" parent="Resource" startPc="268437945">
+<param id="index_of_color"/>
+<param id="is_reverse"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438038" name="get_font" parent="Resource" startPc="268438008">
 <param id="font_id"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436221" name="get_y_offset" parent="Resource" startPc="268436191">
+<functionEntry accessMode="public" endPc="268438069" name="get_y_offset" parent="Resource" startPc="268438039">
 <param id="font_id"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436238" name="get" parent="Resource" startPc="268436222">
+<functionEntry accessMode="public" endPc="268438100" name="get_line_spacing" parent="Resource" startPc="268438070">
+<param id="font_id"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438117" name="get" parent="Resource" startPc="268438101">
 <param id="name"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436614" name="get_time_lines" parent="Resource" startPc="268436239">
+<functionEntry accessMode="public" endPc="268438493" name="get_time_lines" parent="Resource" startPc="268438118">
 <param id="time_display"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268439011" name="&lt;init&gt;" parent="Resource" startPc="268438923">
+<functionEntry accessMode="protected" endPc="268440679" name="&lt;init&gt;" parent="Resource" startPc="268440577">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436637" name="initialize" parent="FirstView" startPc="268436615">
+<functionEntry accessMode="public" endPc="268438516" name="initialize" parent="FirstView" startPc="268438494">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436702" name="onLayout" parent="FirstView" startPc="268436638">
+<functionEntry accessMode="public" endPc="268438563" name="onLayout" parent="FirstView" startPc="268438517">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436717" name="onShow" parent="FirstView" startPc="268436703">
+<functionEntry accessMode="public" endPc="268438578" name="onShow" parent="FirstView" startPc="268438564">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436722" name="onHide" parent="FirstView" startPc="268436718">
+<functionEntry accessMode="public" endPc="268438583" name="onHide" parent="FirstView" startPc="268438579">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436737" name="onExitSleep" parent="FirstView" startPc="268436723">
+<functionEntry accessMode="public" endPc="268438598" name="onExitSleep" parent="FirstView" startPc="268438584">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436752" name="onEnterSleep" parent="FirstView" startPc="268436738">
+<functionEntry accessMode="public" endPc="268438613" name="onEnterSleep" parent="FirstView" startPc="268438599">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268436865" name="onUpdate" parent="FirstView" startPc="268436753">
+<functionEntry accessMode="public" endPc="268438724" name="onUpdate" parent="FirstView" startPc="268438614">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268437290" name="draw_doNotDisturb" parent="FirstView" startPc="268436866">
+<functionEntry accessMode="public" endPc="268439115" name="draw_doNotDisturb" parent="FirstView" startPc="268438725">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438219" name="draw_time" parent="FirstView" startPc="268437291">
+<functionEntry accessMode="public" endPc="268439953" name="draw_time" parent="FirstView" startPc="268439116">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438439" name="draw_battery" parent="FirstView" startPc="268438220">
+<functionEntry accessMode="public" endPc="268440185" name="draw_battery" parent="FirstView" startPc="268439954">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438514" name="get_x_offset" parent="FirstView" startPc="268438440">
+<functionEntry accessMode="public" endPc="268440254" name="get_x_offset" parent="FirstView" startPc="268440186">
 <param id="r"/>
 <param id="h"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268438892" name="&lt;init&gt;" parent="FirstView" startPc="268438844">
+<functionEntry accessMode="protected" endPc="268440527" name="&lt;init&gt;" parent="FirstView" startPc="268440479">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438560" name="initialize" parent="Background" startPc="268438515">
+<functionEntry accessMode="protected" endPc="268440552" name="&lt;init&gt;" parent="Drawables" startPc="268440552">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="public" endPc="268438630" name="draw" parent="Background" startPc="268438561">
+<functionEntry accessMode="protected" endPc="268440554" name="&lt;init&gt;" parent="Fonts" startPc="268440554">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="protected" endPc="268440556" name="&lt;init&gt;" parent="JsonData" startPc="268440556">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440447" name="WatchFace" parent="Layouts" startPc="268440255">
 <param id="dc"/>
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268438843" name="&lt;init&gt;" parent="Background" startPc="268438825">
+<functionEntry accessMode="protected" endPc="268440555" name="&lt;init&gt;" parent="Layouts" startPc="268440555">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268438917" name="&lt;init&gt;" parent="Drawables" startPc="268438917">
+<functionEntry accessMode="protected" endPc="268440553" name="&lt;init&gt;" parent="Menus" startPc="268440553">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268438919" name="&lt;init&gt;" parent="Fonts" startPc="268438919">
+<functionEntry accessMode="protected" endPc="268440557" name="&lt;init&gt;" parent="Strings" startPc="268440557">
 <documentation/>
 </functionEntry>
-<functionEntry accessMode="protected" endPc="268438921" name="&lt;init&gt;" parent="JsonData" startPc="268438921">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="public" endPc="268438823" name="WatchFace" parent="Layouts" startPc="268438631">
-<param id="dc"/>
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="protected" endPc="268438920" name="&lt;init&gt;" parent="Layouts" startPc="268438920">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="protected" endPc="268438918" name="&lt;init&gt;" parent="Menus" startPc="268438918">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="protected" endPc="268438922" name="&lt;init&gt;" parent="Strings" startPc="268438922">
-<documentation/>
-</functionEntry>
-<functionEntry accessMode="protected" endPc="268438916" name="&lt;init&gt;" parent="Rez" startPc="268438893">
+<functionEntry accessMode="protected" endPc="268440551" name="&lt;init&gt;" parent="Rez" startPc="268440528">
 <documentation/>
 </functionEntry>
 </functions>

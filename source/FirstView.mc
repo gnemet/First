@@ -2,13 +2,16 @@ using Toybox.Graphics as Gfx;
 using Toybox.WatchUi as Ui;
 using Toybox.Application as App;
 using Toybox.System as Sys;
+using Toybox.Math as Math;
 
 import Toybox.Lang;
 
 class FirstView extends Ui.WatchFace {
   var isAwake = false;
   var is_round_screen = null;
-  var resource = new Resource();
+  //var resource = new Resource();
+  //var resource = getRsc();
+  var status = new StatusView();
 
   function initialize() {
     WatchFace.initialize();
@@ -21,7 +24,9 @@ class FirstView extends Ui.WatchFace {
     //    setLayout(Rez.Layouts.WatchFace(dc));
 
     // load resources
-    resource.load();
+    // resource.load();
+    // App.getApp().read_properties();
+
     is_round_screen =
       Sys.getDeviceSettings().screenShape == Sys.SCREEN_SHAPE_ROUND;
   }
@@ -51,57 +56,63 @@ class FirstView extends Ui.WatchFace {
 
   // Update the view
   function onUpdate(dc as Dc) as Void {
-    dc.setColor(App.getApp().background_color, App.getApp().background_color);
+    dc.setColor(getApp().background_color, getApp().background_color);
     dc.clear();
 
     draw_time(dc);
-    draw_battery(dc);
+    //draw_battery(dc);
     draw_doNotDisturb(dc);
+    status.draw_arc(dc);
 
     // Call the parent onUpdate function to redraw the layout
     // View.onUpdate(dc);
   }
+
   function draw_doNotDisturb(dc as Dc) {
     // If this device supports the Do Not Disturb feature,
     // load the associated Icon into memory.
-    var dndIcon = Sys.getDeviceSettings() has :doNotDisturb ? Ui.loadResource(Rez.Drawables.DoNotDisturbIcon) : null ;
-    var dndBuffer as Gfx.BufferedBitmap = null ; 
-   
-     if ( null != dndIcon && Toybox.Graphics has :BufferedBitmap ) {              // check to see if device has BufferedBitmap enabled
-        dndBuffer = new Gfx.BufferedBitmap(
-                {:width=> dndIcon.getWidth(),
-                 :height=>dndIcon.getHeight(),
-                 :bitmapResource =>dndIcon,
-                 :palette=>[Gfx.COLOR_RED,
-                            Gfx.COLOR_DK_GRAY,
-                            Gfx.COLOR_LT_GRAY,
-                            Gfx.COLOR_BLACK,
-                            Gfx.COLOR_WHITE]} );       // create an off-screen buffer with a palette of four colors
-    } else {
-        dndBuffer = null;                             // handle devices without BufferedBitmap
-    }
-    
-    if ( dndBuffer ) {
-      dc.drawBitmap(100, 100, dndBuffer );
-    }
+    var dndIcon =
+      Sys.getDeviceSettings() has :doNotDisturb
+        ? Ui.loadResource(Rez.Drawables.DoNotDisturbIcon)
+        : null;
+    var dndBuffer as Gfx.BufferedBitmap = null;
+
+    // check to see if device has BufferedBitmap enabled
+    dndBuffer =
+      null != dndIcon && Toybox.Graphics has :BufferedBitmap
+        ? new Gfx.BufferedBitmap({
+            :width => dndIcon.getWidth(),
+            :height => dndIcon.getHeight(),
+            :bitmapResource => dndIcon,
+            :palette => [
+              Gfx.COLOR_DK_GRAY,
+              Gfx.COLOR_LT_GRAY,
+              Gfx.COLOR_BLACK,
+              Gfx.COLOR_RED,
+              Gfx.COLOR_WHITE,
+            ],
+          }) /* create an off-screen buffer with a palette of four colors */
+        : null; /* handle devices without BufferedBitmap */
+
+    // if ( dndBuffer ) {
+    //   dc.drawBitmap(100, 100, dndBuffer );
+    // }
 
     // Draw the do-not-disturb icon if we support it and the setting is enabled
     if (null != dndIcon && Sys.getDeviceSettings().doNotDisturb) {
-      dc.drawBitmap( ( dc.getWidth() - dndIcon.getWidth() ) / 2, 0, dndIcon);
+      dc.drawBitmap((dc.getWidth() - dndIcon.getWidth()) / 2, 0, dndIcon);
     }
   }
 
   function draw_time(dc as Dc) {
-    var hour_color = App.getApp().getProperty("HourColor");
-    var min_color = App.getApp().getProperty("MinColor");
-    var sec_color = App.getApp().getProperty("SecColor");
-    var time_display = App.getApp().getProperty("TimeDisplay");
-    var time_font_id = App.getApp().getProperty("TimeFont").toNumber();
-    var time_font = resource.get_font(time_font_id);
+    var app = getApp();
+    var time_font = getRsc().get_font(app.time_font_id);
+    var time_font_heigth =
+      dc.getFontHeight(time_font) * getRsc().get_line_spacing(app.time_font_id);
 
-    var lines = resource.get_time_lines(time_display);
+    var lines = getRsc().get_time_lines(app.time_display);
     var num_of_lines = lines.size();
-    var all_text_height = num_of_lines * dc.getFontHeight(time_font);
+    var all_text_height = num_of_lines * time_font_heigth;
     var x_offset = is_round_screen
       ? get_x_offset(dc.getWidth() / 2, all_text_height / 2)
       : 0;
@@ -109,17 +120,17 @@ class FirstView extends Ui.WatchFace {
     var y_pos = dc.getHeight() / 2 - all_text_height / 2;
 
     for (var i = 0; i < num_of_lines; i++) {
-      y_pos += (i ? 1 : 0) * dc.getFontHeight(time_font);
+      y_pos += i ? time_font_heigth : 0;
 
       var text_dimension = dc.getTextDimensions(lines[i], time_font);
-      var y_offset = resource.get_y_offset(time_font_id);
+      var y_offset = getRsc().get_y_offset(app.time_font_id);
       var relative_text_height = text_dimension[1] - y_offset;
       var second = Sys.getClockTime().sec;
       var info_text = second.toString() + " " + i.toString();
 
       if (i) {
         // draw filled rectangle to represent text's color
-        dc.setColor(min_color, min_color);
+        dc.setColor(app.min_color, app.min_color);
         dc.fillRectangle(
           x_pos - text_dimension[0] + 1,
           y_pos + 1,
@@ -128,7 +139,7 @@ class FirstView extends Ui.WatchFace {
         );
 
         // draw filled rectangle to represent second level
-        dc.setColor(sec_color, sec_color);
+        dc.setColor(app.sec_color, app.sec_color);
 
         var min_line = num_of_lines == 3 ? 2 : 1;
         var second_height = relative_text_height * (second / 60.0);
@@ -158,18 +169,10 @@ class FirstView extends Ui.WatchFace {
       } // if i
 
       dc.setColor(
-        i ? Gfx.COLOR_TRANSPARENT : hour_color,
-        App.getApp().background_color
+        i ? Gfx.COLOR_TRANSPARENT : app.hour_color,
+        app.background_color
       );
       dc.drawText(x_pos, y_pos, time_font, lines[i], Gfx.TEXT_JUSTIFY_RIGHT);
-
-      //      dc.setColor( Gfx.COLOR_ORANGE, Gfx.COLOR_BLACK);
-      //      dc.drawText( dc.getWidth() / 2, dc.getHeight() -
-      //      dc.getFontHeight( resource.get( "battery_font" ) )
-      //                 , resource.get( "battery_font" )
-      //                 , info_text
-      //                 , Gfx.TEXT_JUSTIFY_CENTER
-      //                 );
     } // end of for ( i )
   }
 
@@ -186,8 +189,8 @@ class FirstView extends Ui.WatchFace {
       dc.setColor(0xff7b03, Gfx.COLOR_TRANSPARENT);
       dc.drawText(
         dc.getWidth() / 2,
-        dc.getHeight() - dc.getFontHeight(resource.get("battery_font")),
-        resource.get("battery_font"),
+        dc.getHeight() - dc.getFontHeight(getRsc().get("battery_font")) - 20,
+        getRsc().get("battery_font"),
         (battery + 0.5).toNumber().toString() + "%",
         Gfx.TEXT_JUSTIFY_CENTER
       );

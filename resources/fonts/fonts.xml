@@ -1,6 +1,8 @@
 <fonts>
-    <font id="Tahoma" filename="tahoma.fnt" antialias="true"></font>
-    <font id="watchtowerlaser" filename="watchtowerlaser.fnt" antialias="true"></font>
+    <font id="Tahoma" filename="tahoma.fnt" antialias="true" filter="abcdefghijklmnopqrstuvwxyz0123456789-%"></font>
+    <font id="watchtowerlaser" filename="watchtowerlaser48.fnt" antialias="true" ></font>
     <font id="australianshepherd" filename="ks-australian-shepherd.fnt" antialias="true"></font>
     <font id="welshterrier" filename="ks-welsh-terrier-hide-n-seek-font.fnt" antialias="true"></font>
+    <font id="connect" filename="connect18.fnt" antialias="true"></font>
 </fonts>
+ 
