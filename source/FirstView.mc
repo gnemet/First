@@ -1,3 +1,6 @@
+/*
+created: 
+*/
 using Toybox.Graphics as Gfx;
 using Toybox.WatchUi as Ui;
 using Toybox.Application as App;
@@ -9,8 +12,6 @@ import Toybox.Lang;
 class FirstView extends Ui.WatchFace {
   var isAwake = false;
   var is_round_screen = null;
-  //var resource = new Resource();
-  //var resource = getRsc();
   var status = new StatusView();
 
   function initialize() {
@@ -22,11 +23,7 @@ class FirstView extends Ui.WatchFace {
 
   function onLayout(dc as Dc) as Void {
     //    setLayout(Rez.Layouts.WatchFace(dc));
-
-    // load resources
-    // resource.load();
-    // App.getApp().read_properties();
-
+    status.init(dc);
     is_round_screen =
       Sys.getDeviceSettings().screenShape == Sys.SCREEN_SHAPE_ROUND;
   }
@@ -62,11 +59,16 @@ class FirstView extends Ui.WatchFace {
     draw_time(dc);
     //draw_battery(dc);
     draw_doNotDisturb(dc);
-    status.draw_arc(dc);
+    status.update(dc);
 
     // Call the parent onUpdate function to redraw the layout
     // View.onUpdate(dc);
   }
+
+  // Handle the partial update event
+  // function onPartialUpdate(dc) {
+  //   status.drawBackground(dc);
+  // }
 
   function draw_doNotDisturb(dc as Dc) {
     // If this device supports the Do Not Disturb feature,

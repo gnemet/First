@@ -1,3 +1,12 @@
+/*
+ * @Author: Gabor Nemet
+ * @Email: gbr.nmt@gmail.com
+ * @Date: 2022-05-05 11:10:23
+ * @Last Modified by:   Gabor Nemet
+ * @Last Modified time: 2022-05-05 11:10:23
+ * @Description: Description
+ */
+
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
@@ -8,15 +17,15 @@ var AppResource = new Resource();
 
 class FirstApp extends Application.AppBase {
   public var background_color as Gfx.ColorType = Gfx.COLOR_BLACK;
-  public var hour_color as Gfx.ColorType;
-  public var min_color as Gfx.ColorType;
-  public var sec_color as Gfx.ColorType;
-  public var time_display = null;
-  public var time_font_id as Lang.Number;
+  public var hour_color as Gfx.ColorType = Gfx.COLOR_DK_BLUE;
+  public var min_color as Gfx.ColorType = Gfx.COLOR_BLUE;
+  public var sec_color as Gfx.ColorType = Gfx.COLOR_WHITE;
+  public var time_display as Lang.Number = 2;
+  public var time_font_id as Lang.Number = 1;
 
   function initialize() {
     AppBase.initialize();
-    read_properties();
+    read_properties( false );
     AppResource.load();
   }
 
@@ -35,7 +44,7 @@ class FirstApp extends Application.AppBase {
   // since the settings are only used in onUpdate().
   function onSettingsChanged() {
     try {
-      read_properties();
+      read_properties( true );
     } catch (ex) {
       // Code to catch all execeptions
     } finally {
@@ -45,21 +54,14 @@ class FirstApp extends Application.AppBase {
     WatchUi.requestUpdate();
   }
 
-  function read_properties() {
-    background_color = Properties.getValue("BackgroundColor");
-    hour_color = Properties.getValue("HourColor");
-    min_color = Properties.getValue("MinColor");
-    sec_color = Properties.getValue("SecColor");
-    time_display = Properties.getValue("TimeDisplay");
-    time_font_id = Properties.getValue("TimeFont").toNumber();
-
-    if (true) {
-      background_color = 0x000000;
-      hour_color = 0x007cc3;
-      min_color = 0x185be8;
-      sec_color = 0x00b0fc;
-      time_display = 2;
-      time_font_id = 1;
+  function read_properties(bUseProperties) {
+    if (bUseProperties) {
+      background_color = Properties.getValue("BackgroundColor");
+      hour_color = Properties.getValue("HourColor");
+      min_color = Properties.getValue("MinColor");
+      sec_color = Properties.getValue("SecColor");
+      time_display = Properties.getValue("TimeDisplay");
+      time_font_id = Properties.getValue("TimeFont").toNumber();
     }
   }
 } // end of FirstApp

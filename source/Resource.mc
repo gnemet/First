@@ -1,12 +1,31 @@
-import Toybox.Application;
-import Toybox.Lang;
+/*
+ * @Author: Gabor Nemet
+ * @Email: gbr.nmt@gmail.com
+ * @Date: 2022-05-05 11:10:52
+ * @Last Modified by:   Gabor Nemet
+ * @Last Modified time: 2022-05-05 11:10:52
+ * @Description: Description
+ */
+
+using Toybox.System as Sys;
+using Toybox.Application;
+using Toybox.Lang;
+using Toybox.Graphics as Gfx;
 
 class Resource extends Application.AppBase {
   protected var dict = {};
   protected var fonts = [];
   protected var text_hours = [];
   protected var text_minutes = [];
-  protected var colors = [];
+  protected var status_colors = [
+    { "percent" => 00, "angle_ratio" => 0.10, "color" => Gfx.COLOR_RED },
+    { "percent" => 10, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PURPLE },
+    { "percent" => 30, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PINK },
+    { "percent" => 50, "angle_ratio" => 0.20, "color" => Gfx.COLOR_ORANGE },
+    { "percent" => 70, "angle_ratio" => 0.15, "color" => Gfx.COLOR_YELLOW },
+    { "percent" => 80, "angle_ratio" => 0.15, "color" => Gfx.COLOR_DK_GREEN },
+    { "percent" => 90, "angle_ratio" => 0.10, "color" => Gfx.COLOR_GREEN },
+  ];
 
   var time_lines = [];
 
@@ -42,10 +61,15 @@ class Resource extends Application.AppBase {
       "y_offset" => 0,
       "line_spacing" => 1.0,
     });
+    fonts.add({
+      "rsc" => loadResource(Rez.Fonts.fontello),
+      "y_offset" => 0,
+      "line_spacing" => 1.0,
+    });
 
     dict["DisplayMode"] = loadResource(Rez.Strings.DisplayMode);
 
-    colors = loadResource(Rez.JsonData.GreenYellowRed);
+    // status_colors = loadResource(Rez.JsonData.GreenYellowRed);
 
     // dict["minute_color"] = colors.get("MINUTE").toLongWithBase(16);
     // dict["second_color"] = colors.get("SECOND").toLongWithBase(16);
@@ -55,16 +79,35 @@ class Resource extends Application.AppBase {
     text_minutes = loadResource(Rez.JsonData.minute);
   }
 
-  function get_count_of_colors() {
-    return colors.size();
+  function status_count() {
+    return status_colors.size();
   }
 
-  function get_color(index_of_color, is_reverse) {
-    var i = is_reverse
-      ? get_count_of_colors() - index_of_color - 1
-      : index_of_color;
+  function status_angle_ratio(i) {
+    return status_colors[i].get("angle_ratio");
+  }
 
-    return colors[i].toLongWithBase(16);
+    function status_color(i) {
+    return status_colors[i].get("color");
+  }
+
+  function status_index_by_percent(percent) {
+    var i = 0;
+    for (i = 0; i < status_count(); i++) {
+      var prcnt = status_colors[i].get("percent");
+
+      if ( prcnt > 100 * percent) {
+        break;
+      }
+    }
+
+    return i ? i - 1 : i;
+  }
+
+  function status_color_by_percent(percent) {
+    var i = status_index_by_percent(percent) ;
+
+    return status_color( i );
   }
 
   function get_font(font_id) {
@@ -85,9 +128,9 @@ class Resource extends Application.AppBase {
 
   function get_time_lines(time_display) {
     // get current time
-    var clockTime = System.getClockTime();
+    var clockTime = Sys.getClockTime();
     var hour = (
-      System.getDeviceSettings().is24Hour
+      Sys.getDeviceSettings().is24Hour
         ? clockTime.hour
         : clockTime.hour % 12
         ? clockTime.hour % 12
