@@ -9,6 +9,7 @@
 
 using Toybox.Graphics as Gfx;
 using Toybox.Lang;
+using Toybox.Math;
 using Toybox.System as Sys;
 // using Toybox.Time;
 using Toybox.Time.Gregorian;
@@ -116,18 +117,17 @@ class StatusView extends Ui.WatchFace {
     var actinfo = ActivityMonitor.getInfo();
     var step = 0;
     var battery = Sys.getSystemStats().battery.toNumber();
-    var connect_icons = "";
+    //var connect_icons = "";
     var icons = [];
     var max_percent = 0;
+    var current_sec = Sys.getClockTime().sec ;
 
     // step
     if (actinfo has :stepGoal) {
       actinfo.stepGoal = actinfo.stepGoal ? actinfo.stepGoal : 10000;
       var percent = actinfo.steps.toFloat() / actinfo.stepGoal;
       step = draw_arc(dc, step, percent);
-      connect_icons = 'Q' + connect_icons;
-
-      // connect_icons.lead('Q');
+      //connect_icons = 'Q' + connect_icons;
       max_percent = max(max_percent, percent);
 
       icons.add({ "letter" => 'Q', "font_id" => 4, "percent" => percent });
@@ -139,7 +139,7 @@ class StatusView extends Ui.WatchFace {
         : 50;
       var percent = actinfo.floorsClimbed.toFloat() / actinfo.floorsClimbedGoal;
       step = draw_arc(dc, step, percent);
-      connect_icons = 'e' + connect_icons;
+      //connect_icons = 'e' + connect_icons;
       max_percent = max(max_percent, percent);
 
       icons.add({ "letter" => 'e', "font_id" => 4, "percent" => percent });
@@ -153,17 +153,16 @@ class StatusView extends Ui.WatchFace {
         actinfo.activeMinutesWeek.total.toFloat() /
         actinfo.activeMinutesWeekGoal;
       step = draw_arc(dc, step, percent);
-      connect_icons = 'o' + connect_icons;
+      //connect_icons = 'o' + connect_icons;
       max_percent = max(max_percent, percent);
 
       icons.add({ "letter" => 'o', "font_id" => 4, "percent" => percent });
     }
-
     // battery
     if (battery) {
       var percent = battery / 100.0;
       step = draw_arc(dc, step, percent);
-      connect_icons = 'T' + connect_icons;
+      //connect_icons = 'T' + connect_icons;
       max_percent = max(max_percent, percent);
 
       icons.add({ "letter" => 'T', "font_id" => 4, "percent" => percent });
@@ -171,15 +170,16 @@ class StatusView extends Ui.WatchFace {
 
     // seconds
     if (true) {
-      var percent = Sys.getClockTime().sec.toFloat() / 60.0;
+      var percent = current_sec.toFloat() / 60.0;
       step = draw_arc(dc, step, percent);
-      connect_icons = 'a' + connect_icons;
+      //connect_icons = 'a' + connect_icons;
       max_percent = max(max_percent, percent);
 
       icons.add({ "letter" => 'a', "font_id" => 4, "percent" => percent });
     }
 
     //draw_icons(dc, step, connect_icons);
+
     draw_color_icons(dc, icons);
   }
 
@@ -198,48 +198,33 @@ class StatusView extends Ui.WatchFace {
     return r;
   }
   function draw_color_icons(dc, icons) {
-    var r = get_radius(dc, icons.size());
-    var x_pos =
-      dc.getWidth() / 2 + Math.cos(Math.toRadians(360 - degreeStart)) * r
-      - ( icons.size() / 2 ) * 18 /* not nice */;
     var y_pos =
-      dc.getHeight() / 2 + Math.sin(Math.toRadians(360 - degreeStart)) * r;
-    var       font_id = getRsc().get_font(icons[0].get("font_id")); // rightest font
- 
-    get_rightest_point_on_circle( dc.getWidth() / 2 , y_pos - dc.getFontHeight(font_id) ) ;
+      dc.getHeight() / 2 +
+      Math.sin(Math.toRadians(360 - degreeStart)) *
+        get_radius(dc, icons.size());
+    var font_id = getRsc().get_font(icons[0].get("font_id")); // rightest font
+    var x_pos =
+      get_rightest_point_on_circle(
+        dc.getWidth() / 2,
+        y_pos - 1 * dc.getFontHeight(font_id)
+      ) + 0;
 
-    for (var i = 0 ;  i < icons.size(); i++) {
+    for (var i = 0; i < icons.size(); i++) {
       font_id = getRsc().get_font(icons[i].get("font_id"));
       var str = icons[i].get("letter").toString();
       var dim = dc.getTextDimensions(str, font_id);
       x_pos -= dim[0];
-      dc.setColor( getRsc().status_color_by_percent(icons[i].get("percent")), Gfx.COLOR_TRANSPARENT);
+      dc.setColor(
+        getRsc().status_color_by_percent(icons[i].get("percent")),
+        Gfx.COLOR_TRANSPARENT
+      );
       dc.drawText(
         x_pos,
         y_pos - dc.getFontHeight(font_id),
         font_id,
         str,
-        Gfx.TEXT_JUSTIFY_CENTER
+        Gfx.TEXT_JUSTIFY_RIGHT
       );
-
-    //var font_id = Gfx.FONT_XTINY;
-    // for (var i = icons.size() - 1; i >= 0; i--) {
-    //   var font_id = getRsc().get_font(icons[i].get("font_id"));
-    //   var str = icons[i].get("letter").toString();
-    //   var dim = dc.getTextDimensions(str, font_id);
-    //   x_pos += dim[0];
-    //   dc.setColor( getRsc().status_color_by_percent(icons[i].get("percent")), Gfx.COLOR_TRANSPARENT);
-    //   dc.drawText(
-    //     x_pos,
-    //     y_pos - dc.getFontHeight(font_id),
-    //     font_id,
-    //     str,
-    //     Gfx.TEXT_JUSTIFY_CENTER
-    //   );
-
-      //dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-      //dc.drawPoint(x_pos, y_pos);
-
     }
   }
 
@@ -269,14 +254,15 @@ class StatusView extends Ui.WatchFace {
 
     var prcnt = percent > 1 ? 1 : percent;
     var end_color_index = getRsc().status_index_by_percent(prcnt);
-
-    dc.setPenWidth(pen_width - 1);
-
+    //var min_degree = degreeStart - ( (degreeStart - degreeEnd) * prcnt ) ;
     var from_degree = degreeStart;
     var to_degree = degreeStart;
 
+    dc.setPenWidth(pen_width - 1);
+
     for (var i = 0; i <= end_color_index; i++) {
       to_degree -= getRsc().status_angle_ratio(i) * (degreeStart - degreeEnd);
+     // to_degree = to_degree > min_degree ? min_degree : to_degree  ;
 
       dc.setColor(
         i == -1 ? Gfx.COLOR_WHITE : getRsc().status_color(i),
@@ -289,13 +275,14 @@ class StatusView extends Ui.WatchFace {
     return step + 1;
   }
 
-  function get_rightest_point_on_circle( radius, y ) {
-    var x = Math.sqrt( Math.pow( r, 2) - Math.pow( y - r , 2) ) + r ; 
+  function get_rightest_point_on_circle(radius, y) {
+    var right_x =
+      Math.sqrt(Math.pow(radius, 2) - Math.pow(y - radius, 2)) + radius;
 
     // https://mathworld.wolfram.com/Circle-LineIntersection.html
 
-    // var x1 = p_x1 - dc.getWidth() / 2 ; 
-    // var y1 = p_y1 - dc.getHeight() / 2 ; 
+    // var x1 = p_x1 - dc.getWidth() / 2 ;
+    // var y1 = p_y1 - dc.getHeight() / 2 ;
     // var x2 = x1 + 1000 /* infiniti line */;
     // var y2 = y1 ;
     // var r = dc.getWidth() / 2 ;
@@ -306,7 +293,7 @@ class StatusView extends Ui.WatchFace {
 
     // var xi = ( D*dy + dx * Math.sqrt( Math.pow( r, 2) * Math.pow( dr, 2) - Math.pow( D, 2) ) ) / ( Math.pow( dr, 2) ) + dc.getWidth() / 2;
     // var yi = ( -D*dx + dy * Math.sqrt( Math.pow( r, 2) * Math.pow( dr, 2) - Math.pow( D, 2) ) ) / ( Math.pow( dr, 2) ) + dc.getHeight() / 2;
-    
-    return ;
+
+    return right_x;
   }
 }
