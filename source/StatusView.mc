@@ -204,13 +204,15 @@ class StatusView extends Ui.WatchFace {
       - ( icons.size() / 2 ) * 18 /* not nice */;
     var y_pos =
       dc.getHeight() / 2 + Math.sin(Math.toRadians(360 - degreeStart)) * r;
+    var       font_id = getRsc().get_font(icons[0].get("font_id")); // rightest font
+ 
+    get_rightest_point_on_circle( dc.getWidth() / 2 , y_pos - dc.getFontHeight(font_id) ) ;
 
-    //var font_id = Gfx.FONT_XTINY;
-    for (var i = icons.size() - 1; i >= 0; i--) {
-      var font_id = getRsc().get_font(icons[i].get("font_id"));
+    for (var i = 0 ;  i < icons.size(); i++) {
+      font_id = getRsc().get_font(icons[i].get("font_id"));
       var str = icons[i].get("letter").toString();
       var dim = dc.getTextDimensions(str, font_id);
-      x_pos += dim[0];
+      x_pos -= dim[0];
       dc.setColor( getRsc().status_color_by_percent(icons[i].get("percent")), Gfx.COLOR_TRANSPARENT);
       dc.drawText(
         x_pos,
@@ -220,10 +222,24 @@ class StatusView extends Ui.WatchFace {
         Gfx.TEXT_JUSTIFY_CENTER
       );
 
+    //var font_id = Gfx.FONT_XTINY;
+    // for (var i = icons.size() - 1; i >= 0; i--) {
+    //   var font_id = getRsc().get_font(icons[i].get("font_id"));
+    //   var str = icons[i].get("letter").toString();
+    //   var dim = dc.getTextDimensions(str, font_id);
+    //   x_pos += dim[0];
+    //   dc.setColor( getRsc().status_color_by_percent(icons[i].get("percent")), Gfx.COLOR_TRANSPARENT);
+    //   dc.drawText(
+    //     x_pos,
+    //     y_pos - dc.getFontHeight(font_id),
+    //     font_id,
+    //     str,
+    //     Gfx.TEXT_JUSTIFY_CENTER
+    //   );
+
       //dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
       //dc.drawPoint(x_pos, y_pos);
 
-      get_leftest_point( dc, x_pos, y_pos ) ;
     }
   }
 
@@ -273,21 +289,23 @@ class StatusView extends Ui.WatchFace {
     return step + 1;
   }
 
-  function get_leftest_point( dc, p_x1, p_y1 ) {
+  function get_rightest_point_on_circle( radius, y ) {
+    var x = Math.sqrt( Math.pow( r, 2) - Math.pow( y - r , 2) ) + r ; 
+
     // https://mathworld.wolfram.com/Circle-LineIntersection.html
 
-    var x1 = p_x1 - dc.getWidth() / 2 ; 
-    var y1 = p_y1 - dc.getHeight() / 2 ; 
-    var x2 = x1 + 1000 /* infiniti line */;
-    var y2 = y1 ;
-    var r = dc.getWidth() / 2 ;
-    var dx = x2 - x1 ;
-    var dy = y2 - y1 ;
-    var dr = Math.sqrt( Math.pow( dx, 2) + Math.pow( dy, 2) ) ;
-    var D = x1*y2 - x2*y1 ;
+    // var x1 = p_x1 - dc.getWidth() / 2 ; 
+    // var y1 = p_y1 - dc.getHeight() / 2 ; 
+    // var x2 = x1 + 1000 /* infiniti line */;
+    // var y2 = y1 ;
+    // var r = dc.getWidth() / 2 ;
+    // var dx = x2 - x1 ;
+    // var dy = y2 - y1 ;
+    // var dr = Math.sqrt( Math.pow( dx, 2) + Math.pow( dy, 2) ) ;
+    // var D = x1*y2 - x2*y1 ;
 
-    var xi = ( D*dy + dx * Math.sqrt( Math.pow( r, 2) * Math.pow( dr, 2) - Math.pow( D, 2) ) ) / ( Math.pow( dr, 2) ) + dc.getWidth() / 2;
-    var yi = ( -D*dx + dy * Math.sqrt( Math.pow( r, 2) * Math.pow( dr, 2) - Math.pow( D, 2) ) ) / ( Math.pow( dr, 2) ) + dc.getHeight() / 2;
+    // var xi = ( D*dy + dx * Math.sqrt( Math.pow( r, 2) * Math.pow( dr, 2) - Math.pow( D, 2) ) ) / ( Math.pow( dr, 2) ) + dc.getWidth() / 2;
+    // var yi = ( -D*dx + dy * Math.sqrt( Math.pow( r, 2) * Math.pow( dr, 2) - Math.pow( D, 2) ) ) / ( Math.pow( dr, 2) ) + dc.getHeight() / 2;
     
     return ;
   }
