@@ -98,7 +98,7 @@ class StatusView extends Ui.WatchFace {
   }
 
   // Draw the date string into the provided buffer at the specified location
-  function drawDateString(dc, x, y) {
+  function drawDateString(dc, x, y, str) {
     var timeinfo = Gregorian.info(Time.now(), Time.FORMAT_LONG);
     var dateStr = Lang.format("$1$ $2$ $3$", [
       timeinfo.day_of_week,
@@ -106,8 +106,13 @@ class StatusView extends Ui.WatchFace {
       timeinfo.day,
     ]);
 
+    var secStr = timeinfo.sec.format("%0d") + " - " + str;
+
     dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-    dc.drawText(x, y, Gfx.FONT_MEDIUM, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+    // dc.drawText(x, y, Gfx.FONT_MEDIUM, dateStr, Gfx.TEXT_JUSTIFY_CENTER);
+    dc.drawText(x, y, Gfx.FONT_MEDIUM, secStr, Gfx.TEXT_JUSTIFY_RIGHT);
+
+    // Sys.println( secStr ) ;
   }
   function max(a, b) {
     return a > b ? a : b;
@@ -120,7 +125,7 @@ class StatusView extends Ui.WatchFace {
     //var connect_icons = "";
     var icons = [];
     var max_percent = 0;
-    var current_sec = Sys.getClockTime().sec ;
+    var current_sec = Sys.getClockTime().sec;
 
     // step
     if (actinfo has :stepGoal) {
@@ -170,7 +175,8 @@ class StatusView extends Ui.WatchFace {
 
     // seconds
     if (true) {
-      var percent = current_sec.toFloat() / 60.0;
+      var percent = ( current_sec / 59.0 );
+      Sys.println( "Sec:" + current_sec.format("%02d") + " " + percent + ":");
       step = draw_arc(dc, step, percent);
       //connect_icons = 'a' + connect_icons;
       max_percent = max(max_percent, percent);
@@ -248,13 +254,18 @@ class StatusView extends Ui.WatchFace {
   }
 
   function draw_arc(dc as Dc, step as Lang.Long, percent as Lang.float) {
-    var x_pos = dc.getWidth() / 2;
-    var y_pos = dc.getHeight() / 2;
+    var center = [dc.getWidth() / 2, dc.getHeight() / 2];
     var r = get_radius(dc, step);
 
-    var prcnt = percent > 1 ? 1 : percent;
+    // max 100%, min 5%
+    var prcnt = percent > 1 ? 1 : percent == 0 ? 0.05 : percent;
+
+    // calculate last segment
     var end_color_index = getRsc().status_index_by_percent(prcnt);
-    //var min_degree = degreeStart - ( (degreeStart - degreeEnd) * prcnt ) ;
+
+    var last_degree = degreeStart - (degreeStart - degreeEnd) * prcnt;
+
+    // start values
     var from_degree = degreeStart;
     var to_degree = degreeStart;
 
@@ -262,13 +273,26 @@ class StatusView extends Ui.WatchFace {
 
     for (var i = 0; i <= end_color_index; i++) {
       to_degree -= getRsc().status_angle_ratio(i) * (degreeStart - degreeEnd);
-     // to_degree = to_degree > min_degree ? min_degree : to_degree  ;
+      // last segment
+      if (from_degree > last_degree && to_degree < last_degree) {
+        if (step == 4) {
+          Sys.println( from_degree + " " + to_degree + " " + last_degree);
+        }
+        to_degree = last_degree;
+      }
 
       dc.setColor(
         i == -1 ? Gfx.COLOR_WHITE : getRsc().status_color(i),
         Gfx.COLOR_TRANSPARENT
       );
-      dc.drawArc(x_pos, y_pos, r, Gfx.ARC_CLOCKWISE, from_degree, to_degree);
+      dc.drawArc(
+        center[0],
+        center[1],
+        r,
+        Gfx.ARC_CLOCKWISE,
+        from_degree,
+        to_degree
+      );
       from_degree = to_degree;
     }
 

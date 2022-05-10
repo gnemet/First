@@ -18,13 +18,18 @@ class Resource extends Application.AppBase {
   protected var text_hours = [];
   protected var text_minutes = [];
   protected var status_colors = [
-    { "percent" => 00, "angle_ratio" => 0.10, "color" => Gfx.COLOR_RED },
+    { "percent" => 00, "angle_ratio" => 0.1, "color" => Gfx.COLOR_RED },
     { "percent" => 10, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PURPLE },
     { "percent" => 30, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PINK },
-    { "percent" => 50, "angle_ratio" => 0.20, "color" => Gfx.COLOR_ORANGE },
+    { "percent" => 50, "angle_ratio" => 0.2, "color" => Gfx.COLOR_ORANGE },
     { "percent" => 70, "angle_ratio" => 0.15, "color" => Gfx.COLOR_YELLOW },
     { "percent" => 80, "angle_ratio" => 0.15, "color" => Gfx.COLOR_DK_GREEN },
-    { "percent" => 90, "angle_ratio" => 0.10, "color" => Gfx.COLOR_GREEN },
+    { "percent" => 90, "angle_ratio" => 0.1, "color" => Gfx.COLOR_GREEN },
+    {
+      "percent" => 100,
+      "angle_ratio" => 0.0,
+      "color" => Gfx.COLOR_TRANSPARENT,
+    },
   ];
 
   var time_lines = [];
@@ -87,27 +92,27 @@ class Resource extends Application.AppBase {
     return status_colors[i].get("angle_ratio");
   }
 
-    function status_color(i) {
+  function status_color(i) {
     return status_colors[i].get("color");
   }
 
   function status_index_by_percent(percent) {
-    var i = 0;
-    for (i = 0; i < status_count(); i++) {
-      var prcnt = status_colors[i].get("percent");
-
-      if ( prcnt > 100 * percent) {
-        break;
+    for (var i = 0; i < status_count() - 1; i++) {
+      var prcnt_from = status_colors[i].get("percent") / 100.0;
+      var prcnt_to = status_colors[i + 1].get("percent") / 100.0;
+      // return index if found in segment
+      if (percent <= prcnt_to && percent >= prcnt_from) {
+        return i;
       }
     }
-
-    return i ? i - 1 : i;
+    // error
+    return null;
   }
 
   function status_color_by_percent(percent) {
-    var i = status_index_by_percent(percent) ;
+    var i = status_index_by_percent(percent);
 
-    return status_color( i );
+    return status_color(i);
   }
 
   function get_font(font_id) {
