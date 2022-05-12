@@ -20,13 +20,13 @@ class Resource extends Application.AppBase {
   protected var text_minutes = [];
   protected var color_palette = [];
   protected var status_colors = [
-    { "percent" => 00, "angle_ratio" => 0.10, "color" => Gfx.COLOR_RED },
+    { "percent" => 00, "angle_ratio" => 0.1, "color" => Gfx.COLOR_RED },
     { "percent" => 10, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PURPLE },
     { "percent" => 30, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PINK },
-    { "percent" => 50, "angle_ratio" => 0.20, "color" => Gfx.COLOR_ORANGE },
+    { "percent" => 50, "angle_ratio" => 0.2, "color" => Gfx.COLOR_ORANGE },
     { "percent" => 70, "angle_ratio" => 0.15, "color" => Gfx.COLOR_YELLOW },
     { "percent" => 80, "angle_ratio" => 0.15, "color" => Gfx.COLOR_DK_GREEN },
-    { "percent" => 90, "angle_ratio" => 0.10, "color" => Gfx.COLOR_GREEN },
+    { "percent" => 90, "angle_ratio" => 0.1, "color" => Gfx.COLOR_GREEN },
     {
       "percent" => 100,
       "angle_ratio" => 0.0,
@@ -85,21 +85,27 @@ class Resource extends Application.AppBase {
       "y_offset" => 0,
       "line_spacing" => 1.0,
     });
+    fonts.add({
+      "id" => 7,
+      "name" => "connect24",
+      "rsc" => loadResource(Rez.Fonts.connect24),
+      "y_offset" => 0,
+      "line_spacing" => 1.0,
+    });
 
     dict["DisplayMode"] = loadResource(Rez.Strings.DisplayMode);
 
     // color_palette = loadResource(Rez.JsonData.GreenYellowRed);
-    color_palette = loadResource(Rez.JsonData.Paletta64 );
-    
-    
+    color_palette = loadResource(Rez.JsonData.Paletta64);
+
     // over write default colors
-    status_colors[0].put( "color", color_palette[6*8+0].toLongWithBase(16 ) );
-    status_colors[1].put( "color", color_palette[6*8+5].toLongWithBase(16 ) );
-    status_colors[2].put( "color", color_palette[7*8+0].toLongWithBase(16 ) );
-    status_colors[3].put( "color", color_palette[7*8+5].toLongWithBase(16 ) );
-    status_colors[4].put( "color", color_palette[5*8+5].toLongWithBase(16 ) );
-    status_colors[5].put( "color", color_palette[1*8+1].toLongWithBase(16 ) );
-    status_colors[6].put( "color", color_palette[1*8+6].toLongWithBase(16 ) );
+    status_colors[0].put("color", color_palette[6 * 8 + 0].toLongWithBase(16));
+    status_colors[1].put("color", color_palette[6 * 8 + 5].toLongWithBase(16));
+    status_colors[2].put("color", color_palette[7 * 8 + 0].toLongWithBase(16));
+    status_colors[3].put("color", color_palette[7 * 8 + 5].toLongWithBase(16));
+    status_colors[4].put("color", color_palette[5 * 8 + 5].toLongWithBase(16));
+    status_colors[5].put("color", color_palette[1 * 8 + 1].toLongWithBase(16));
+    status_colors[6].put("color", color_palette[1 * 8 + 6].toLongWithBase(16));
 
     // { "percent" => 00, "angle_ratio" => 0.10, "color" => Gfx.COLOR_RED },
     // { "percent" => 10, "angle_ratio" => 0.15, "color" => Gfx.COLOR_PURPLE },
@@ -153,7 +159,7 @@ class Resource extends Application.AppBase {
   }
 
   function get_font_rsc_by_id(id) {
-    return get_font_rsc( get_font_index(id) );
+    return get_font_rsc(get_font_index(id));
   }
 
   function get_font_index(id) {

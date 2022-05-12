@@ -127,7 +127,8 @@ class StatusView extends Ui.WatchFace {
     var i = current_sec / (60 / n);
     var value_str = (icons[i].get("percent") * 100).format("%d") + "%";
     var symbol_str = icons[i].get("letter").toString();
-    var symbol_font_id = getRsc().get_font_rsc_by_id(icons[0].get("font_id"));
+    //var symbol_font_id = getRsc().get_font_rsc_by_id(icons[0].get("font_id"));
+    var symbol_font_id = getRsc().get_font_rsc_by_id(7);
 
     switch (icons[i].get("name")) {
       case "seconds": {
