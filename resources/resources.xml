@@ -5,15 +5,15 @@
     </jsonData>
 
     <jsonData id="hour">
-        [ "ZERO",
-       "ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE",
-       "TEN","ELEVEN","TWELVE","THIRTEEN","FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN",
-       "TWENTY","TWENTYONE","TWENTYTWO","TWENTYTHREE","TWENTYFOUR"
-       ]
+        ["ZERO",
+        "ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE",
+        "TEN","ELEVEN","TWELVE","THIRTEEN","FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN",
+        "TWENTY","TWENTYONE","TWENTYTWO","TWENTYTHREE","TWENTYFOUR"
+        ]
     </jsonData>
 
     <jsonData id="minute01">
-        [  "O'CLOCK",
+        ["O'CLOCK",
         "O-ONE","O-TWO","O-THREE","O-FOUR","O-FIVE","O-SIX","O-SEVEN","O-EIGHT","O-NINE",
         "TEN","ELEVEN","TWELVE","THIRTEEN","FOURTEEN","FIFTEEN","SIXTEEN","SEVENTEEN","EIGHTEEN","NINETEEN",
         "TWENTY","TWENTY:ONE","TWENTY:TWO","TWENTY:THREE","TWENTY:FOUR","TWENTY:FIVE","TWENTY:SIX","TWENTY:SEVEN","TWENTY:EIGHT","TWENTY:NINE",
@@ -25,9 +25,9 @@
     </jsonData>
 
     <jsonData id="minute">
-        [  "O'CLOCK",
+        ["O'CLOCK",
         "O-ONE","O-TWO","O-THREE","O-FOUR","O-FIVE","O-SIX","O-SEVEN","O-EIGHT","O-NINE",
-        "TEN", "ELEVEN","TWELVE","THIR:TEEN","FOUR:TEEN","FIFTEEN","SIX:TEEN","SEVEN:TEEN","EIGH:TEEN","NINE:TEEN",
+        "TEN","ELEVEN","TWELVE","THIR:TEEN","FOUR:TEEN","FIFTEEN","SIX:TEEN","SEVEN:TEEN","EIGH:TEEN","NINE:TEEN",
         "TWENTY","TWENTY:ONE","TWENTY:TWO","TWENTY:THREE","TWENTY:FOUR","TWENTY:FIVE","TWENTY:SIX","TWENTY:SEVEN","TWENTY:EIGHT","TWENTY:NINE",
         "THIRTY","THIRTY:ONE","THIRTY:TWO","THIRTY:THREE","THIRTY:FOUR","THIRTY:FIVE","THIRTY:SIX","THIRTY:SEVEN","THIRTY:EIGHT","THIRTY:NINE",
         "FORTY","FORTY:ONE","FORTY:TWO","FORTY:THREE","FORTY:FOUR","FORTY:FIVE","FORTY:SIX","FORTY:SEVEN","FORTY:EIGHT","FORTY:NINE",
@@ -37,7 +37,20 @@
     </jsonData>
 
     <jsonData id="GreenYellowRed">
-        [ "57bb8a","63b682","73b87e","84bb7b","94bd77","a4c073","b0be6e","c4c56d","d4c86a","e2c965","f5ce62"
-         ,"f3c563","e9b861","e6ad61","ecac67","e9a268","e79a69","e5926b","e2886c","e0816d","dd776e" ]
+        ["57bb8a","63b682","73b87e","84bb7b","94bd77","a4c073","b0be6e","c4c56d","d4c86a","e2c965","f5ce62"
+        ,"f3c563","e9b861","e6ad61","ecac67","e9a268","e79a69","e5926b","e2886c","e0816d","dd776e"]
     </jsonData>
+
+    <jsonData id="Paletta64">
+        ["000000","000055","0000AA","0000FF","005500","005555","0055AA","0055FF"
+        ,"00AA00","00AA55","00AAAA","00AAFF","00FF00","00FF55","00FFAA","00FFFF"
+        ,"550000","550055","5500AA","5500FF","555500","555555","5555AA","5555FF"
+        ,"55AA00","55AA55","55AAAA","55AAFF","55FF00","55FF55","55FFAA","55FFFF"
+        ,"AA0000","AA0055","AA00AA","AA00FF","AA5500","AA5555","AA55AA","AA55FF"
+        ,"AAAA00","AAAA55","AAAAAA","AAAAFF","AAFF00","AAFF55","AAFFAA","AAFFFF"
+        ,"FF0000","FF0055","FF00AA","FF00FF","FF5500","FF5555","FF55AA","FF55FF"
+        ,"FFAA00","FFAA55","FFAAAA","FFAAFF","FFFF00","FFFF55","FFFFAA","FFFFFF"]
+    </jsonData>
+
+
 </resources>

@@ -117,76 +117,194 @@ class StatusView extends Ui.WatchFace {
   function max(a, b) {
     return a > b ? a : b;
   }
+  function draw_info(dc as Dc, icons) {
+    var actinfo = ActivityMonitor.getInfo();
+    var battery = Sys.getSystemStats().battery.toNumber();
+    var current_sec = Sys.getClockTime().sec;
+    var value_font_id = Gfx.FONT_SYSTEM_LARGE;
+    var justification = Gfx.TEXT_JUSTIFY_RIGHT;
+    var n = icons.size();
+    var i = current_sec / (60 / n);
+    var value_str = (icons[i].get("percent") * 100).format("%d") + "%";
+    var symbol_str = icons[i].get("letter").toString();
+    var symbol_font_id = getRsc().get_font_rsc_by_id(icons[0].get("font_id"));
+
+    switch (icons[i].get("name")) {
+      case "seconds": {
+        value_str = (icons[i].get("percent") * 60).format("%d");
+        break;
+      }
+    }
+
+    if (value_str) {
+      Sys.println(value_str + " ... " + symbol_str);
+
+      var x_pos = dc.getWidth() / 2;
+      var dim = dc.getTextDimensions(value_str, value_font_id);
+      var y_pos = dc.getHeight() / 2 - dim[1];
+
+      // dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
+      dc.setColor(
+        getRsc().status_color_by_percent(icons[i].get("percent")),
+        Gfx.COLOR_TRANSPARENT
+      );
+      dc.drawText(x_pos, y_pos, value_font_id, value_str, justification);
+
+      dc.drawText(
+        x_pos,
+        y_pos + dim[1],
+        symbol_font_id,
+        symbol_str,
+        justification
+      );
+    }
+  }
 
   function draw_status(dc as Dc) {
     var actinfo = ActivityMonitor.getInfo();
-    var step = 0;
     var battery = Sys.getSystemStats().battery.toNumber();
-    //var connect_icons = "";
     var icons = [];
-    var max_percent = 0;
     var current_sec = Sys.getClockTime().sec;
-
+    var font_id = 5;
+    var x_offset = 0;
     // step
     if (actinfo has :stepGoal) {
       actinfo.stepGoal = actinfo.stepGoal ? actinfo.stepGoal : 10000;
-      var percent = actinfo.steps.toFloat() / actinfo.stepGoal;
-      step = draw_arc(dc, step, percent);
-      //connect_icons = 'Q' + connect_icons;
-      max_percent = max(max_percent, percent);
-
-      icons.add({ "letter" => 'Q', "font_id" => 4, "percent" => percent });
+      icons.add({
+        "name" => "step",
+        "letter" => 'Q',
+        "font_id" => font_id,
+        "percent" => actinfo.steps.toFloat() / actinfo.stepGoal,
+        "x_offset" => x_offset,
+        "position" => "start",
+      });
     }
+
     // floors
     if (actinfo has :floorsClimbed && actinfo has :floorsClimbedGoal) {
       actinfo.floorsClimbedGoal = actinfo.floorsClimbedGoal
         ? actinfo.floorsClimbedGoal
         : 50;
-      var percent = actinfo.floorsClimbed.toFloat() / actinfo.floorsClimbedGoal;
-      step = draw_arc(dc, step, percent);
-      //connect_icons = 'e' + connect_icons;
-      max_percent = max(max_percent, percent);
-
-      icons.add({ "letter" => 'e', "font_id" => 4, "percent" => percent });
+      icons.add({
+        "name" => "floors",
+        "letter" => 'e',
+        "font_id" => font_id,
+        "percent" => actinfo.floorsClimbed.toFloat() /
+        actinfo.floorsClimbedGoal,
+        "x_offset" => x_offset,
+        "position" => "start",
+      });
     }
+
     // activities
     if (actinfo has :activeMinutesWeek && actinfo has :activeMinutesWeekGoal) {
       actinfo.activeMinutesWeekGoal = actinfo.activeMinutesWeekGoal
         ? actinfo.activeMinutesWeekGoal
         : 700;
-      var percent =
-        actinfo.activeMinutesWeek.total.toFloat() /
-        actinfo.activeMinutesWeekGoal;
-      step = draw_arc(dc, step, percent);
-      //connect_icons = 'o' + connect_icons;
-      max_percent = max(max_percent, percent);
-
-      icons.add({ "letter" => 'o', "font_id" => 4, "percent" => percent });
+      icons.add({
+        "name" => "activities",
+        "letter" => 'o',
+        "font_id" => font_id,
+        "percent" => actinfo.activeMinutesWeek.total.toFloat() /
+        actinfo.activeMinutesWeekGoal,
+        "x_offset" => x_offset,
+        "position" => "start",
+      });
     }
-    // battery
-    if (battery) {
-      var percent = battery / 100.0;
-      step = draw_arc(dc, step, percent);
-      //connect_icons = 'T' + connect_icons;
-      max_percent = max(max_percent, percent);
-
-      icons.add({ "letter" => 'T', "font_id" => 4, "percent" => percent });
-    }
+    icons.add({
+      "name" => "battery",
+      "letter" => 'T',
+      "font_id" => font_id,
+      "percent" => battery / 100.0,
+      "x_offset" => x_offset,
+      "position" => "start",
+    });
+    icons.add({
+      "name" => "seconds",
+      "letter" => 'a',
+      "font_id" => font_id,
+      "percent" => current_sec / 59.0,
+      "x_offset" => x_offset,
+      "position" => "start",
+    });
 
     // seconds
-    if (true) {
-      var percent = ( current_sec / 59.0 );
-      Sys.println( "Sec:" + current_sec.format("%02d") + " " + percent + ":");
-      step = draw_arc(dc, step, percent);
-      //connect_icons = 'a' + connect_icons;
-      max_percent = max(max_percent, percent);
-
-      icons.add({ "letter" => 'a', "font_id" => 4, "percent" => percent });
+    if (false) {
+      Sys.println(
+        "Sec:" + current_sec.format("%02d") + " " + current_sec / 59.0 + ":"
+      );
     }
 
-    //draw_icons(dc, step, connect_icons);
+    var count_of_arcs = icons.size();
+    // draw all arcs
+    for (var i = 0; i < count_of_arcs; i++) {
+      draw_arc(dc, i, icons[i].get("percent"));
+    }
+    draw_color_icons(dc, icons, degreeStart, count_of_arcs);
+    draw_info(dc, icons);
 
-    draw_color_icons(dc, icons);
+    // delete all elements
+    icons = [];
+    var settings = Sys.getDeviceSettings();
+    var percent = 40 / 100.0;
+    font_id = 6;
+    x_offset = 2;
+
+    // do-not-disturb
+    icons.add({
+      "name" => "do-not-disturb",
+      "letter" => settings.doNotDisturb ? 'C' : 'A',
+      "font_id" => font_id,
+      "percent" => settings.doNotDisturb ? 0.0 : percent,
+      "x_offset" => x_offset,
+      "position" => "end",
+    });
+    // alarms
+    icons.add({
+      "name" => "alarmCount",
+      "letter" => settings.alarmCount ? 'N' : 'M',
+      "font_id" => font_id,
+      "percent" => settings.alarmCount ? 0.0 : percent,
+      "x_offset" => x_offset,
+      "position" => "end",
+    });
+
+    // notification
+    if (settings.notificationCount) {
+      icons.add({
+        "name" => "notificationCount",
+        "letter" => settings.notificationCount ? 'D' : null,
+        "font_id" => font_id,
+        "percent" => percent,
+        "x_offset" => x_offset,
+        "position" => "end",
+      });
+    }
+    // connectionAvailable
+    if (settings.connectionAvailable) {
+      icons.add({
+        "name" => "connectionAvailable",
+        "letter" => settings.connectionAvailable ? 'E' : null,
+        "font_id" => font_id,
+        "percent" => percent,
+        "x_offset" => x_offset,
+        "position" => "end",
+      });
+    }
+
+    // connectionAvailable
+    if (settings.phoneConnected) {
+      icons.add({
+        "name" => "phoneConnected",
+        "letter" => settings.phoneConnected ? 'L' : null,
+        "font_id" => font_id,
+        "percent" => percent,
+        "x_offset" => x_offset,
+        "position" => "end",
+      });
+    }
+
+    draw_color_icons(dc, icons, degreeEnd, count_of_arcs);
   }
 
   function draw_status_stick(dc, step, percent) {
@@ -203,41 +321,52 @@ class StatusView extends Ui.WatchFace {
     var r = (dc.getWidth() - pen_width) / 2 - step * pen_width;
     return r;
   }
-  function draw_color_icons(dc, icons) {
+
+  function draw_color_icons(dc, icons, degree_position, count_of_arcs) {
     var y_pos =
       dc.getHeight() / 2 +
-      Math.sin(Math.toRadians(360 - degreeStart)) *
-        get_radius(dc, icons.size());
-    var font_id = getRsc().get_font(icons[0].get("font_id")); // rightest font
+      Math.sin(Math.toRadians(360 - degree_position)) *
+        get_radius(dc, count_of_arcs);
+
+    var font_id = getRsc().get_font_rsc_by_id(icons[0].get("font_id")); // rightest font
     var x_pos =
       get_rightest_point_on_circle(
-        dc.getWidth() / 2,
-        y_pos - 1 * dc.getFontHeight(font_id)
+        dc.getWidth() / 2, // radius
+        y_pos + (degree_position > 180 ? -1 : 1) * dc.getFontHeight(font_id)
       ) + 0;
 
     for (var i = 0; i < icons.size(); i++) {
-      font_id = getRsc().get_font(icons[i].get("font_id"));
+      font_id = getRsc().get_font_rsc_by_id(icons[i].get("font_id"));
       var str = icons[i].get("letter").toString();
+      var x_offset = icons[i].get("x_offset");
       var dim = dc.getTextDimensions(str, font_id);
-      x_pos -= dim[0];
+      x_pos -= dim[0] + x_offset;
       dc.setColor(
         getRsc().status_color_by_percent(icons[i].get("percent")),
         Gfx.COLOR_TRANSPARENT
       );
-      dc.drawText(
-        x_pos,
-        y_pos - dc.getFontHeight(font_id),
-        font_id,
-        str,
-        Gfx.TEXT_JUSTIFY_RIGHT
-      );
+      if (false) {
+        dc.drawPoint(
+          x_pos,
+          y_pos + (degree_position > 180 ? -1 : 0) * dc.getFontHeight(font_id)
+        );
+      }
+      if (str) {
+        dc.drawText(
+          x_pos,
+          y_pos + (degree_position > 180 ? -1 : 0) * dc.getFontHeight(font_id),
+          font_id,
+          str,
+          Gfx.TEXT_JUSTIFY_RIGHT
+        );
+      }
     }
   }
 
   function draw_icons(dc, step, icons) {
     var r = get_radius(dc, step);
     //var font_id = Gfx.FONT_XTINY;
-    var font_id = getRsc().get_font(4);
+    var font_id = getRsc().get_font_rsc_by_id(5);
     var x_pos =
       dc.getWidth() / 2 + Math.cos(Math.toRadians(360 - degreeStart)) * r;
     var y_pos =
@@ -256,6 +385,7 @@ class StatusView extends Ui.WatchFace {
   function draw_arc(dc as Dc, step as Lang.Long, percent as Lang.float) {
     var center = [dc.getWidth() / 2, dc.getHeight() / 2];
     var r = get_radius(dc, step);
+    var full_arc_degree = degreeStart - degreeEnd;
 
     // max 100%, min 5%
     var prcnt = percent > 1 ? 1 : percent == 0 ? 0.05 : percent;
@@ -263,7 +393,7 @@ class StatusView extends Ui.WatchFace {
     // calculate last segment
     var end_color_index = getRsc().status_index_by_percent(prcnt);
 
-    var last_degree = degreeStart - (degreeStart - degreeEnd) * prcnt;
+    var last_degree = degreeStart - full_arc_degree * prcnt;
 
     // start values
     var from_degree = degreeStart;
@@ -272,12 +402,13 @@ class StatusView extends Ui.WatchFace {
     dc.setPenWidth(pen_width - 1);
 
     for (var i = 0; i <= end_color_index; i++) {
-      to_degree -= getRsc().status_angle_ratio(i) * (degreeStart - degreeEnd);
+      to_degree -= getRsc().status_angle_ratio(i) * full_arc_degree;
+      if (false && step == 4) {
+        // sec
+        Sys.println(from_degree + " " + to_degree + " " + last_degree);
+      }
       // last segment
-      if (from_degree > last_degree && to_degree < last_degree) {
-        if (step == 4) {
-          Sys.println( from_degree + " " + to_degree + " " + last_degree);
-        }
+      if (false && from_degree >= last_degree && to_degree < last_degree) {
         to_degree = last_degree;
       }
 

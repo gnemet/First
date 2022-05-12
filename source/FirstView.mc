@@ -57,8 +57,6 @@ class FirstView extends Ui.WatchFace {
     dc.clear();
 
     draw_time(dc);
-    //draw_battery(dc);
-    draw_doNotDisturb(dc);
     status.update(dc);
 
     // Call the parent onUpdate function to redraw the layout
@@ -70,45 +68,9 @@ class FirstView extends Ui.WatchFace {
   //   status.drawBackground(dc);
   // }
 
-  function draw_doNotDisturb(dc as Dc) {
-    // If this device supports the Do Not Disturb feature,
-    // load the associated Icon into memory.
-    var dndIcon =
-      Sys.getDeviceSettings() has :doNotDisturb
-        ? Ui.loadResource(Rez.Drawables.DoNotDisturbIcon)
-        : null;
-    var dndBuffer as Gfx.BufferedBitmap = null;
-
-    // check to see if device has BufferedBitmap enabled
-    dndBuffer =
-      null != dndIcon && Toybox.Graphics has :BufferedBitmap
-        ? new Gfx.BufferedBitmap({
-            :width => dndIcon.getWidth(),
-            :height => dndIcon.getHeight(),
-            :bitmapResource => dndIcon,
-            :palette => [
-              Gfx.COLOR_DK_GRAY,
-              Gfx.COLOR_LT_GRAY,
-              Gfx.COLOR_BLACK,
-              Gfx.COLOR_RED,
-              Gfx.COLOR_WHITE,
-            ],
-          }) /* create an off-screen buffer with a palette of four colors */
-        : null; /* handle devices without BufferedBitmap */
-
-    // if ( dndBuffer ) {
-    //   dc.drawBitmap(100, 100, dndBuffer );
-    // }
-
-    // Draw the do-not-disturb icon if we support it and the setting is enabled
-    if (null != dndIcon && Sys.getDeviceSettings().doNotDisturb) {
-      dc.drawBitmap((dc.getWidth() - dndIcon.getWidth()) / 2, 0, dndIcon);
-    }
-  }
-
   function draw_time(dc as Dc) {
     var app = getApp();
-    var time_font = getRsc().get_font(app.time_font_id);
+    var time_font = getRsc().get_font_rsc(app.time_font_id);
     var time_font_heigth =
       dc.getFontHeight(time_font) * getRsc().get_line_spacing(app.time_font_id);
 
